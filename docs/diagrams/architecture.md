@@ -27,13 +27,13 @@ An organiser or public event notice is an information source outside the system.
 
 | Component | Responsibility and data | Requirement / scenario trace |
 |---|---|---|
-| React/TypeScript web client | Catalogue, selected interval, reservation forms, own history, calendar and assigned-club admin views; transient loading/error states | BR-01/11/13/14; SC-01 through SC-06, SC-14 |
-| REST API boundary / FastAPI | Request models, route contracts, safe errors, authenticated context, correlation/operation IDs; no trust in client owner or role | BR-02/03/06/07; SC-03/13/14 |
-| Identity and access | User/session identity, visitor ownership and current club assignments; checked for every operation | BR-07/08, NFR-02; SC-10/13 |
-| Club and station catalogue | Clubs, station identity/specifications, active status and club zone | BR-01/02/14; SC-01/02/07 |
+| React/TypeScript web client | Catalogue, selected interval, reservation forms, own history, calendar and assigned-club admin views; transient loading/error states | BR-01/11/13/14; SC-01 through SC-06; common states |
+| REST API boundary / FastAPI | Request models, route contracts, safe errors, authenticated context, correlation/operation IDs; no trust in client owner or role | BR-02/03/06/07; SC-03; common states |
+| Identity and access | User/session identity, visitor ownership and current club assignments; checked for every operation | BR-07/08, NFR-02; SC-07/14 |
+| Club and station catalogue | Clubs, station identity/specifications, active status and club zone | BR-01/02/14; SC-01/02/08 |
 | Reservation and availability | Availability calculation, creation, own history, cancellation and durable replay semantics | BR-03 through BR-12; SC-02 through SC-05 |
 | Club administration | Authorised station, schedule and maintenance changes; all booking-affecting writes use the same coordinator | BR-09/10; SC-07 through SC-10 |
-| Events | Draft/published/cancelled event information, source, zone and club association; no automatic reservation | SC-06/11 |
+| Events | Draft/published/cancelled event information, source, zone and club association; no automatic reservation | SC-06/13 |
 | Reporting and audit | Defined scheduled-utilisation queries and actor/action/result records | BR-15, NFR-10; SC-12 |
 | Transaction coordinator / data access | Shared lock order, revalidation, operation uniqueness, transaction and error mapping, migrations | BR-04/06/09/10, NFR-01/03/05 |
 | PostgreSQL | Durable users, assignments, clubs, stations, schedules, maintenance, reservations, operation identities, events and audit data | All persisted invariants; future ECR-12 schema |
@@ -57,7 +57,7 @@ The overlap constraint protects reservations in one table. Maintenance in anothe
 
 ## 5. Runtime flows and failure boundaries
 
-**Create:** browser requests availability -> API returns advisory state -> visitor confirms with an operation key -> access check and transaction protocol -> commit -> response with reservation ID. If another writer wins the station interval, the loser gets a conflict and refreshes availability. After a lost response the browser reconciles using the same key rather than inventing a second operation.
+**Create:** browser requests availability -> API returns advisory state -> visitor confirms with an operation key -> access check and transaction protocol -> commit -> response with reservation ID. If another writer wins the station interval, the loser gets a conflict and refreshes availability. After a lost response the browser refreshes its own reservation list and reconciles using the same key rather than inventing a second operation.
 
 **Cancel:** browser requests cancellation -> server verifies owner under the shared protocol -> confirmed future reservation becomes cancelled -> commit -> refreshed own history. A second cancellation returns the cancelled state. Maintenance occupancy remains independent.
 
