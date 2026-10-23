@@ -1,279 +1,312 @@
-# CyberSeat — пользовательские сценарии
+# CyberSeat — User and Administrator Scenarios
 
-Версия 0.1 · 22 октября 2026 года · [ECR-1](https://nerybr.youtrack.cloud/issue/ECR-1)
+Version 1.0 · October 23, 2026 · [ECR-1](https://nerybr.youtrack.cloud/issue/ECR-1)
 
-Ответственный за документ: Mansur Urynbassar. Статус: согласовано командой проекта 23 октября 2026 года.
+Document owner: Mansur Urynbassar. Status: reviewed and approved by the project team on October 23, 2026.
 
-## Назначение и границы
+## Purpose and Scope
 
-Документ описывает ожидаемое поведение будущей системы и служит основой требований, Use Case и UX-макетов первой сдачи до **24 октября 2026 года, 18:00**. Этот срок относится к подготовке материалов, а не к реализации всех описанных функций. Документ не подтверждает, что приложение уже реализовано или испытано.
+This document defines the expected behavior of the proposed CyberSeat system and provides a basis for the functional requirements, use-case model, UX mockups, and subsequent system evaluation. It is part of the first submission due by **6:00 PM on October 24, 2026**. This deadline applies to the project documentation and design materials; it does not require every described feature to be implemented by that date.
 
-Основание: README CyberSeat и обоснования участников команды 3. Потребности пока рассматриваются как проектные положения; подтверждение интервью оформляется отдельно. Оплата, программа лояльности и управление оборудованием не включены.
+The document is based on the CyberSeat README and the project justifications prepared by the three team members. User needs are currently treated as project assumptions and will be validated through interviews and prototype evaluation in a separate activity. Online payment, a loyalty programme, and hardware management are outside the mandatory scope.
 
-## Роли и общие правила
+## Roles and General Rules
 
-| Роль | Граница доступа |
+| Role | Access scope |
 |---|---|
-| Гость | Каталог клубов, характеристики и доступность мест |
-| Посетитель | Создание, просмотр и отмена только собственных броней; календарь мероприятий |
-| Администратор клуба | Места, расписание, бронирования, мероприятия и отчёты закреплённых клубов |
-| Суперадминистратор | Управление клубами и назначение администраторов |
+| Guest | Browse clubs, gaming-station specifications, and availability |
+| Registered visitor | Create, view, and cancel only their own reservations; view the event calendar |
+| Club administrator | Manage stations, schedules, reservations, events, and reports for assigned clubs |
+| System administrator | Manage clubs and administrator assignments |
 
-Дата и время показываются в часовом поясе выбранного клуба с явным обозначением. Доступность зависит от рабочего расписания, действующих броней и блокировок. Предварительно свободное место может стать занятым до подтверждения. Окончательное решение принимает сервер; отсутствие ответа не означает отсутствие брони. Отменённые брони сохраняются в истории.
+Dates and times shall be displayed in the selected club's time zone, which shall be clearly identified in the interface. Availability depends on the club's working schedule, active reservations, and unavailable intervals. A station shown as available may become unavailable before confirmation; therefore, the server shall perform the final availability check. A missing server response shall not be interpreted as either a successful or a failed reservation. Cancelled reservations shall remain in the history.
 
-Ниже приведены согласованные командой критерии проектируемого поведения. Они используются как основа для формирования функциональных требований, Use Case, UX-макетов и последующей проверки системы. Описанные критерии относятся к проектируемому решению и не являются результатами уже выполненных испытаний.
+The following scenarios define team-approved behavior for the proposed system. They are design and acceptance criteria, not claims that the application has already been implemented or tested.
 
-## SC-01. Найти клуб и ознакомиться с местами
+## SC-01. Browse Clubs and Gaming Stations
 
-**Роль:** гость или посетитель. **Предусловия:** каталог доступен. **Начало:** открытие каталога.
+**Actor:** Guest or registered visitor  
+**Preconditions:** The catalogue is available.  
+**Trigger:** The user opens the club catalogue.
 
-1. Пользователь просматривает клубы и задаёт доступные фильтры по характеристикам мест.
-2. Выбирает клуб и открывает его карточку.
-3. Просматривает адрес, оборудование, рабочее расписание и представление игровых мест.
+1. The user browses the available clubs and applies station-related filters.
+2. The user selects a club and opens its details page.
+3. The user reviews the address, equipment, working hours, and gaming-station layout.
 
-**Результат:** выбран клуб для проверки доступности; бронь не создаётся.
+**Expected result:** A club is selected for an availability search; no reservation is created.
 
-**Отклонения:** пустой каталог или отсутствие совпадений сопровождается пояснением и возможностью изменить фильтры; ошибка загрузки — сообщением и повтором запроса.
+**Alternative and error flows:** An empty catalogue or no matching results shall be explained and accompanied by an option to change the filters. A loading failure shall display an error message and a retry action.
 
-**Приёмка:** выбранные фильтры видимы; отсутствие результатов отличается от ошибки; карточка явно указывает выбранный клуб. Схема зала может быть представлена макетом на этапе проектирования.
+**Acceptance criteria:** Applied filters remain visible; an empty result is distinguishable from a loading error; the selected club is clearly identified. At the design stage, the floor layout may be represented by a mockup.
 
-## SC-02. Выбрать дату, время и свободное место
+## SC-02. Select a Date, Time, and Available Station
 
-**Роль:** гость или посетитель. **Предусловия:** выбран клуб. **Начало:** выбор интервала посещения.
+**Actor:** Guest or registered visitor  
+**Preconditions:** A club has been selected.  
+**Trigger:** The user starts selecting a visit interval.
 
-1. Пользователь вводит дату, начало и конец посещения.
-2. Система проверяет корректность интервала и запрашивает доступность.
-3. Пользователь видит свободные, занятые и недоступные места с характеристиками.
-4. Выбирает свободное место и переходит к подтверждению.
+1. The user enters a date, start time, and end time.
+2. The system validates the interval and requests current availability.
+3. The system displays available, occupied, and unavailable stations together with their specifications.
+4. The user selects an available station and proceeds to confirmation.
 
-**Результат:** сформирован выбор клуба, места и времени; доступность ещё не гарантирована.
+**Expected result:** The club, station, and time interval are selected, but availability is not yet guaranteed.
 
-**Отклонения:** конец раньше начала, пустые поля и недопустимое время выделяются у соответствующего поля; вне расписания предлагается другой интервал; при отсутствии мест можно изменить время или клуб. При смене интервала устаревшая доступность не используется для подтверждения.
+**Alternative and error flows:** Missing values, an end time earlier than the start time, and invalid times shall be identified next to the relevant fields. If the interval is outside working hours, the system shall request another interval. If no station is available, the user may change the time or club. Availability data from a previous interval shall not be used after the interval changes.
 
-**Приёмка:** статус обозначен текстом и цветом; часовой пояс видим; заблокированное место нельзя выбрать как свободное; ожидание ответа показано отдельно от пустой выдачи.
+**Acceptance criteria:** Every station status is communicated through both text and colour; the time zone is visible; a blocked station cannot be selected as available; a loading state is distinguishable from an empty result.
 
-## SC-03. Подтвердить бронирование
+## SC-03. Confirm a Reservation
 
-**Роль:** посетитель. **Предусловия:** пользователь вошёл в систему, выбран интервал и место. Гость перед подтверждением проходит вход; способ регистрации и входа уточняется отдельно. **Начало:** открытие подтверждения.
+**Actor:** Registered visitor  
+**Preconditions:** The user is authenticated and has selected a club, station, and interval. A guest must sign in before confirmation.  
+**Trigger:** The user opens the reservation confirmation screen.
 
-1. Пользователь проверяет клуб, место, дату, начало, конец и часовой пояс.
-2. Нажимает «Подтвердить бронирование».
-3. Сервер повторно проверяет права, расписание, блокировки и пересечения с действующими бронями.
-4. При успешном сохранении система показывает идентификатор брони и её данные.
-5. Пользователь открывает созданную бронь в личном кабинете.
+1. The user reviews the club, station, date, start time, end time, and time zone.
+2. The user selects **Confirm reservation**.
+3. The server rechecks access rights, working hours, unavailable intervals, and overlaps with active reservations.
+4. If the reservation is saved, the system displays its identifier and details.
+5. The user opens the new reservation in the personal account.
 
-**Результат:** одна подтверждённая бронь принадлежит текущему посетителю и занимает выбранный интервал.
+**Expected result:** Exactly one confirmed reservation belongs to the current user and occupies the selected interval.
 
-**Отклонения:** если место заняли до подтверждения, новая конфликтующая бронь не создаётся; показывается причина и предлагается сменить место или время. Истёкшая сессия требует повторного входа. При потере соединения после отправки показывается неопределённый результат, предлагается проверить список броней; успех не объявляется без подтверждения сервера.
+**Alternative and error flows:** If the station becomes unavailable before confirmation, the system shall not create a conflicting reservation and shall offer another station or time. An expired session shall require the user to sign in again. If the connection is lost after submission, the interface shall display an uncertain outcome and request an updated reservation list; it shall not claim success without server confirmation.
 
-**Приёмка:** два конкурирующих запроса на одно место с пересекающимся временем не дают две действующие брони; клиентская проверка не заменяет серверную; повторное нажатие во время запроса блокируется. Способ предотвращения дубля при повторной отправке после обрыва связи подлежит согласованию с Әліби.
+**Acceptance criteria:** Concurrent overlapping requests for the same station shall result in no more than one active reservation. Client-side validation shall not replace the server-side check. Repeated submission shall be disabled while a request is pending, and the API shall prevent duplicate reservations when a request is retried after a connection failure.
 
-## SC-04. Просмотреть собственные бронирования
+## SC-04. View Personal Reservations
 
-**Роль:** посетитель. **Предусловия:** выполнен вход. **Начало:** открытие личного кабинета.
+**Actor:** Registered visitor  
+**Preconditions:** The user is authenticated.  
+**Trigger:** The user opens the personal account.
 
-1. Пользователь открывает активные бронирования или историю.
-2. Выбирает запись и просматривает клуб, место, время и статус.
-3. При необходимости переходит к отмене допустимой к отмене брони.
+1. The user opens active reservations or reservation history.
+2. The user selects a record and reviews the club, station, interval, and status.
+3. If permitted, the user proceeds to reservation cancellation.
 
-**Результат:** пользователь получает актуальные сведения о своих бронях.
+**Expected result:** The user receives current information about their own reservations.
 
-**Отклонения:** при отсутствии записей показано пустое состояние; при ошибке данные не подменяются пустым списком. Попытка открыть чужую запись по прямой ссылке отклоняется без раскрытия её данных.
+**Alternative and error flows:** If no records exist, the interface shall show an empty state. A loading error shall not be presented as an empty list. A request for another user's reservation shall be rejected without disclosing its data.
 
-**Приёмка:** чужие брони отсутствуют в списке и недоступны по идентификатору; отменённые записи остаются в истории; дата и статус читаемы на мобильном экране.
+**Acceptance criteria:** Other users' reservations are absent from the list and inaccessible by identifier; cancelled records remain in history; dates and statuses remain readable on mobile screens.
 
-## SC-05. Отменить собственную бронь
+## SC-05. Cancel a Personal Reservation
 
-**Роль:** посетитель. **Предусловия:** есть принадлежащая пользователю действующая бронь; отмена допустима по согласованным правилам. **Начало:** команда отмены в карточке.
+**Actor:** Registered visitor  
+**Preconditions:** The user owns an active reservation and its start time has not passed.  
+**Trigger:** The user selects the cancellation action.
 
-1. Пользователь проверяет сведения о выбранной брони.
-2. Подтверждает намерение отменить её.
-3. Сервер проверяет владельца и актуальный статус, сохраняет отмену.
-4. Интерфейс обновляет статус; запись сохраняется в истории.
+1. The user reviews the selected reservation.
+2. The user confirms the cancellation.
+3. The server verifies ownership and the current reservation status and records the cancellation.
+4. The interface displays the updated status, while the record remains in history.
 
-**Результат:** бронь больше не занимает интервал. Место доступно для новой брони, если нет других ограничений.
+**Expected result:** The cancelled reservation no longer occupies the interval. The station becomes available unless another restriction applies.
 
-**Отклонения:** выход из подтверждения ничего не меняет; уже отменённая бронь показывается с актуальным статусом; при обрыве связи статус повторно запрашивается перед новым действием. Чужую бронь отменить нельзя.
+**Alternative and error flows:** Closing the confirmation dialog shall make no change. An already cancelled reservation shall display its current status. After a connection failure, the client shall request the latest status before repeating an action. A user shall not be able to cancel another user's reservation.
 
-**Приёмка:** история не удаляется; доступность обновляется только после подтверждения операции сервером. Ограничения по срокам отмены и правила для начавшегося посещения пока не утверждены.
+**Acceptance criteria:** Cancellation does not delete the history record; availability changes only after server confirmation. Once the reserved interval has started, the status may be changed only by an authorised club administrator in accordance with club rules, with the action recorded in the audit log.
 
-## SC-06. Просмотреть календарь мероприятий
+## SC-06. View the Event Calendar
 
-**Роль:** посетитель. **Предусловия:** доступен календарь. **Начало:** переход в раздел мероприятий.
+**Actor:** Guest or registered visitor  
+**Preconditions:** The event calendar is available.  
+**Trigger:** The user opens the events section.
 
-1. Пользователь выбирает период и, если предусмотрено макетом, клуб.
-2. Просматривает мероприятия и открывает выбранное.
-3. Читает название, описание, место, дату и время с часовым поясом.
+1. The user selects a period and, where supported by the interface, a club.
+2. The user browses events and opens a selected event.
+3. The user reviews its title, description, location, date, time, and time zone.
 
-**Результат:** пользователь получает сведения о мероприятии; регистрация на турнир или оплата не подразумеваются.
+**Expected result:** The user receives current event information. Tournament registration and payment are outside this scenario.
 
-**Отклонения:** пустой период обозначается отдельно от ошибки; удалённое или недоступное событие не показывается как актуальное. Изменение мероприятия учитывается при повторном открытии.
+**Alternative and error flows:** A period with no events shall be distinguished from a loading error. A cancelled event shall be retained with a clear cancelled status rather than displayed as active. Updated details shall be shown when the event is reopened.
 
-**Приёмка:** календарь и карточка показывают согласованные даты; пользователь может вернуться к выбранному периоду. Правила публичного доступа гостя и публикации внешних турниров требуют уточнения.
+**Acceptance criteria:** The calendar and event details display consistent dates; the user can return to the previously selected period; published club events are available to guests and registered visitors.
 
-## SC-07. Открыть административную область
+## SC-07. Access the Club Administration Area
 
-**Роль:** администратор клуба. **Предусловия:** выполнен вход, есть назначение на клуб. **Начало:** переход в административную панель.
+**Actor:** Club administrator  
+**Preconditions:** The user is authenticated and assigned to at least one club.  
+**Trigger:** The user opens the administration area.
 
-1. Система проверяет административную роль.
-2. Показывает закреплённые клубы.
-3. Администратор выбирает клуб и открывает его разделы управления.
+1. The system verifies the administrative role.
+2. The system displays the clubs assigned to the administrator.
+3. The administrator selects a club and opens its management sections.
 
-**Результат:** доступно управление в пределах полномочий.
+**Expected result:** Management functions are available only within the administrator's authorised scope.
 
-**Отклонения:** посетитель не получает административные данные; ссылка на чужой клуб отклоняется; после отзыва назначения следующая операция требует новой проверки доступа.
+**Alternative and error flows:** A visitor shall not receive administrative data. A direct request for an unassigned club shall be rejected. After an assignment is revoked, the next operation shall require a new authorisation check.
 
-**Приёмка:** ограничения действуют на сервере, включая прямые обращения по идентификаторам; интерфейс явно показывает текущий клуб.
+**Acceptance criteria:** Access restrictions are enforced by the server, including direct requests using resource identifiers; the interface clearly identifies the currently selected club.
 
-## SC-08. Управлять игровыми местами
+## SC-08. Manage Gaming Stations
 
-**Роль:** администратор клуба. **Предусловия:** открыт закреплённый клуб. **Начало:** раздел мест.
+**Actor:** Club administrator  
+**Preconditions:** An assigned club is open in the administration area.  
+**Trigger:** The administrator opens the gaming-station section.
 
-1. Администратор создаёт место либо выбирает существующее.
-2. Вводит или изменяет обозначение и характеристики.
-3. Проверяет данные и сохраняет изменения.
-4. Система обновляет представление места.
+1. The administrator creates a station or selects an existing station.
+2. The administrator enters or edits its label and specifications.
+3. The administrator reviews the data and saves the changes.
+4. The system updates the station representation.
 
-**Результат:** каталог клуба содержит актуальную информацию.
+**Expected result:** The club catalogue contains current station information.
 
-**Отклонения:** обязательные поля и конфликт обозначений проверяются; ошибка сохранения не представляется как успех. Изменение или отключение места с бронями не должно незаметно удалить брони и историю; способ обработки согласуется с Нурали и Әліби.
+**Alternative and error flows:** Required fields and duplicate labels shall be validated. A saving failure shall not be presented as success. A station with existing reservations may be deactivated, but its reservations and history shall not be silently deleted.
 
-**Приёмка:** редактирование чужого клуба запрещено; сохранённые характеристики совпадают с показанными посетителю; существующие брони остаются связаны с местом.
+**Acceptance criteria:** An administrator cannot edit a station belonging to an unassigned club; saved specifications match the information shown to visitors; existing reservations remain linked to the station.
 
-## SC-09. Изменить рабочее расписание
+## SC-09. Update the Working Schedule
 
-**Роль:** администратор клуба. **Предусловия:** есть доступ к расписанию клуба. **Начало:** редактирование рабочих интервалов.
+**Actor:** Club administrator  
+**Preconditions:** The administrator has access to the selected club's schedule.  
+**Trigger:** The administrator edits the working intervals.
 
-1. Администратор задаёт рабочие интервалы и проверяет часовой пояс.
-2. Система проверяет данные и выявляет затронутые существующие брони.
-3. При отсутствии конфликтов сохраняет расписание.
-4. Поиск доступности использует обновлённые ограничения.
+1. The administrator defines working intervals and verifies the club's time zone.
+2. The system validates the data and identifies affected active reservations.
+3. If no conflict exists, the system saves the schedule.
+4. Subsequent availability searches use the updated schedule.
 
-**Результат:** новые брони соответствуют рабочему расписанию.
+**Expected result:** New reservations comply with the current working schedule.
 
-**Отклонения:** некорректные интервалы не сохраняются. Для конфликта с действующей бронью предлагается отказ в изменении с пояснением; окончательный порядок разрешения конфликта согласуется командой. Молчаливая отмена существующей брони недопустима.
+**Alternative and error flows:** Invalid intervals shall not be saved. If a change conflicts with an active reservation, the system shall reject the change and identify the conflict. An existing confirmed reservation shall never be cancelled silently.
 
-**Приёмка:** при конфликте не остаётся частично изменённого расписания; сохранённые изменения учитываются серверной проверкой бронирования.
+**Acceptance criteria:** A conflict shall not leave a partially updated schedule; saved changes are applied by the server-side reservation check.
 
-## SC-10. Заблокировать место на обслуживание
+## SC-10. Block a Station for Maintenance
 
-**Роль:** администратор клуба. **Предусловия:** выбрано место своего клуба. **Начало:** создание интервала недоступности.
+**Actor:** Club administrator  
+**Preconditions:** A station belonging to an assigned club has been selected.  
+**Trigger:** The administrator creates an unavailable interval.
 
-1. Администратор задаёт начало, конец и причину блокировки.
-2. Сервер проверяет интервал и действующие бронирования.
-3. При допустимости сохраняет блокировку.
-4. Посетители видят место недоступным на этот интервал.
+1. The administrator enters the start, end, and reason for the block.
+2. The server validates the interval and checks active reservations.
+3. If the interval is valid and conflict-free, the server saves the block.
+4. Visitors see the station as unavailable during the specified interval.
 
-**Результат:** на обслуживание нельзя создать конфликтующую бронь.
+**Expected result:** A conflicting reservation cannot be created during the maintenance interval.
 
-**Отклонения:** при существующей броне изменение требует разрешения конфликта; предлагается отклонить блокировку, сохранив бронь. При одновременных запросах на бронь и блокировку не допускается противоречивое подтверждение обеих операций. Удаление блокировки не отменяет другие ограничения.
+**Alternative and error flows:** If an active reservation conflicts with the proposed block, the system shall reject the block and preserve the reservation. Concurrent reservation and blocking requests shall not both receive contradictory confirmations. Removing a block shall not remove other availability restrictions.
 
-**Приёмка:** недоступность действует и при прямом запросе бронирования, а не только на схеме зала; ошибка операции не скрывается.
+**Acceptance criteria:** The unavailable interval is enforced by the server for direct reservation requests, not only by the floor-layout interface; failed operations are clearly reported.
 
-## SC-11. Просмотреть бронирования клуба
+## SC-11. View Club Reservations
 
-**Роль:** администратор клуба. **Предусловия:** доступ к выбранному клубу. **Начало:** раздел расписания или бронирований.
+**Actor:** Club administrator  
+**Preconditions:** The administrator has access to the selected club.  
+**Trigger:** The administrator opens the schedule or reservation section.
 
-1. Администратор выбирает дату или период и при необходимости место.
-2. Просматривает брони и их статусы.
-3. Открывает запись для проверки времени и связанного места.
+1. The administrator selects a date or period and, if necessary, a station.
+2. The administrator reviews reservations and their statuses.
+3. The administrator opens a record to verify its interval and station.
 
-**Результат:** администратор видит загрузку своего клуба.
+**Expected result:** The administrator can assess the workload of the assigned club.
 
-**Отклонения:** отсутствие броней отличается от сбоя загрузки; данные другого клуба недоступны. Поля персональных данных ограничиваются необходимыми для обслуживания; их состав согласуется отдельно.
+**Alternative and error flows:** No reservations shall be distinguished from a loading failure. Data from unassigned clubs shall be inaccessible. Only personal data required to service a reservation shall be displayed.
 
-**Приёмка:** отменённые брони не выглядят как занятые интервалы; фильтр клуба соблюдается сервером. Создание, перенос или отмена чужой брони администратором не считаются утверждёнными возможностями этого сценария.
+**Acceptance criteria:** Cancelled reservations shall not appear as occupied intervals; the server shall enforce the selected-club scope. Administrative changes to a visitor's reservation shall follow club rules and be recorded in the audit log.
 
-## SC-12. Просмотреть отчёт клуба
+## SC-12. View a Club Report
 
-**Роль:** администратор клуба. **Предусловия:** доступ к отчётам своего клуба. **Начало:** выбор отчёта.
+**Actor:** Club administrator  
+**Preconditions:** The administrator has access to reports for the selected club.  
+**Trigger:** The administrator selects a report.
 
-1. Администратор задаёт клуб и период в его часовом поясе.
-2. Запрашивает расчёт показателей бронирования и загрузки.
-3. Система показывает результат, период и пояснение расчёта.
+1. The administrator selects a club and reporting period in the club's time zone.
+2. The administrator requests reservation and utilisation indicators.
+3. The system displays the results, reporting period, and calculation definitions.
 
-**Результат:** администратор получает согласованные показатели выбранного периода.
+**Expected result:** The administrator receives approved indicators for the selected period.
 
-**Отклонения:** неверный период требует исправления; отсутствие данных сопровождается пояснением; при ошибке расчёта нули не выдаются за результат.
+**Alternative and error flows:** An invalid period shall require correction. A lack of data shall be explained. A calculation error shall not be represented as a valid zero value.
 
-**Приёмка:** расчёты сверяются с контрольным набором; правила включения отменённых броней и знаменатель загрузки явно определяются до реализации. До этого конкретные проценты не считаются утверждённой метрикой. Финансовый отчёт без согласованной модели стоимости не подразумевается.
+**Acceptance criteria:** Calculations shall be compared with a controlled data set. Cancelled reservations shall be reported separately and excluded from occupied intervals. The utilisation denominator shall be the station time available within the club's working schedule after approved unavailable intervals are excluded. Financial reporting is outside scope unless a pricing model is approved separately.
 
-## SC-13. Управлять мероприятиями клуба
+## SC-13. Manage Club Events
 
-**Роль:** администратор клуба. **Предусловия:** доступ к мероприятиям своего клуба. **Начало:** создание или редактирование события.
+**Actor:** Club administrator  
+**Preconditions:** The administrator has access to events for the selected club.  
+**Trigger:** The administrator creates or edits an event.
 
-1. Администратор задаёт название, описание, место и время.
-2. Проверяет данные и сохраняет событие.
-3. Проверяет его отображение в календаре.
-4. При изменении или отмене мероприятия корректирует запись по согласованному порядку публикации.
+1. The administrator enters the title, description, location, date, and time.
+2. The administrator reviews the data and saves the event.
+3. The administrator verifies its appearance in the calendar.
+4. When an event changes or is cancelled, the administrator updates its published record.
 
-**Результат:** посетителям доступна актуальная информация.
+**Expected result:** Visitors receive current event information.
 
-**Отклонения:** обязательные поля и временные интервалы проверяются; изменять чужое событие нельзя; при ошибке сохранения опубликованное состояние не считается изменённым.
+**Alternative and error flows:** Required fields and time intervals shall be validated. An administrator shall not modify an event belonging to an unassigned club. A saving failure shall not be presented as a published update.
 
-**Приёмка:** карточка и календарь отражают сохранённые сведения; правила удаления, отметки отмены и работы с внешними мероприятиями согласуются отдельно. Само создание события не блокирует игровые места автоматически.
+**Acceptance criteria:** The calendar and event details show the saved information; a cancelled event remains in history with a cancelled status; creating an event does not automatically block gaming stations.
 
-## SC-14. Управлять клубами и назначениями
+## SC-14. Manage Clubs and Administrator Assignments
 
-**Роль:** суперадминистратор. **Предусловия:** подтверждены соответствующие полномочия. **Начало:** управление клубами.
+**Actor:** System administrator  
+**Preconditions:** The user has system-administrator privileges.  
+**Trigger:** The user opens club management.
 
-1. Суперадминистратор создаёт или открывает клуб и проверяет основные сведения, включая часовой пояс.
-2. Выбирает пользователя для назначения администратором конкретного клуба.
-3. Сохраняет назначение либо отзывает существующее.
-4. Проверяет список назначений.
+1. The system administrator creates or opens a club and reviews its primary details, including its time zone.
+2. The system administrator selects a user for assignment to a specific club.
+3. The system administrator saves a new assignment or revokes an existing assignment.
+4. The system displays the updated assignment list.
 
-**Результат:** административные полномочия связаны с определёнными клубами.
+**Expected result:** Administrative permissions are associated with specific clubs.
 
-**Отклонения:** обычный администратор не может повысить собственные права; ошибки ввода и сохранения показываются явно. Изменение данных клуба не должно разрушать историю бронирований.
+**Alternative and error flows:** A club administrator shall not grant themselves additional privileges. Validation and saving errors shall be clearly displayed. Updating club information shall not damage reservation history.
 
-**Приёмка:** назначение предоставляет доступ только к указанному клубу; отзыв учитывается при последующих запросах. Операции удаления клуба и массового изменения прав требуют отдельной детализации.
+**Acceptance criteria:** An assignment grants access only to the specified club; revocation applies to subsequent requests. Club deletion and bulk permission changes require separate requirements and are outside this scenario.
 
-## Общие состояния интерфейса
+## Common Interface States
 
-| Состояние | Ожидаемое поведение |
+| State | Expected behavior |
 |---|---|
-| Загрузка | Показать ожидание; не выдавать его за отсутствие данных |
-| Нет результатов | Объяснить причину и предложить изменить фильтры или период |
-| Неверный ввод | Сообщение рядом с полем, введённые корректные значения сохранены |
-| Истекла сессия | Предложить вход; защищённые данные не раскрывать |
-| Недостаточно прав | Отказать в действии без раскрытия чужих сведений |
-| Ошибка сервера | Ясно сообщить о неуспехе; предложить безопасный повтор |
-| Нет соединения до отправки | Не показывать сохранение; сохранить ввод в текущей форме, если возможно |
-| Нет ответа после отправки | Показать неопределённость и проверку результата; не заявлять успех или неуспех без основания |
-| Конфликт доступности | Обновить данные, предложить другое место или время |
+| Loading | Display progress and do not present it as an empty result |
+| No results | Explain the state and offer changes to filters or the selected period |
+| Invalid input | Display a message next to the relevant field and preserve other valid values |
+| Expired session | Request sign-in and do not expose protected data |
+| Insufficient permissions | Reject the action without disclosing another user's or club's data |
+| Server error | Clearly state that the operation failed and provide a safe retry action |
+| No connection before submission | Do not show the operation as saved; preserve entered data where possible |
+| No response after submission | Display an uncertain outcome and verify the result before allowing a retry |
+| Availability conflict | Refresh availability and offer another station or time |
 
-Макеты должны предусматривать компьютер и мобильный экран, понятные подписи и статусы, различимые не только цветом. Проверка этих состояний на работающем приложении относится к дальнейшим этапам.
+The UX mockups shall cover desktop and mobile layouts, use clear labels, and communicate statuses through more than colour alone. Validation of these states in a working application belongs to later implementation and evaluation stages.
 
-## Связь с ECR-1 и следующими материалами
+## Traceability to ECR-1 and Subsequent Deliverables
 
-| Критерий ECR-1 | Покрытие | Основа для макета |
+| ECR-1 acceptance criterion | Coverage | UX mockup basis |
 |---|---|---|
-| Выбор клуба, места и времени | SC-01–02 | Каталог, карточка клуба, выбор интервала |
-| Создание и конфликт бронирования | SC-03 | Подтверждение, успех, конфликт, неопределённый ответ |
-| Просмотр и отмена своей брони | SC-04–05 | Личный кабинет, карточка, подтверждение отмены |
-| Календарь событий | SC-06 | Календарь и карточка события |
-| Административные операции | SC-07–14 | Выбор клуба, места, расписание, блокировки, отчёты, события |
-| Загрузка, ошибки и потеря соединения | Каждый сценарий и общая таблица | Соответствующие состояния ключевых экранов |
-| Согласование бронирования и администрирования | Чек-лист ниже | Пока не выполнено |
+| Club, station, date, and time selection | SC-01–SC-02 | Catalogue, club details, interval and station selection |
+| Reservation creation and conflict handling | SC-03 | Confirmation, success, conflict, and uncertain-response states |
+| Personal reservation viewing and cancellation | SC-04–SC-05 | Personal account, reservation details, cancellation confirmation |
+| Event calendar | SC-06 | Calendar and event details |
+| Administrative operations | SC-07–SC-14 | Club selection, stations, schedules, blocks, reports, and events |
+| Loading, errors, and connection loss | All scenarios and the common-state table | Relevant states for each principal screen |
+| Team review of reservation and administrative behavior | Team Review Results below | Completed on October 23, 2026 |
 
-SC-01–05 составляют основной поток для первой последовательности UX-макетов. Административный поток — SC-07, SC-10, SC-11. Документ служит входом для требований, Use Case и прототипа; не заменяет эти отдельные результаты.
+SC-01–SC-05 form the principal visitor flow for the first UX mockup sequence. SC-07, SC-10, and SC-11 form the principal administrative flow. This document provides input for the requirements specification, use-case model, and prototype; it does not replace those separate deliverables.
 
-## Принятые командные решения
+## Agreed Team Decisions
 
-## Результаты проверки документа
+| Topic | Approved decision |
+|---|---|
+| Interval boundaries | Reservations use the half-open interval `[start, end)`, so one reservation may end when the next begins. Minimum duration shall be configurable by the club. |
+| Cancellation | A visitor may cancel their own reservation before its start time. Once the interval has started, status changes require an authorised club administrator and an audit-log entry. |
+| Lost response during creation | The client shall request the current reservation list after reconnection. The API and database shall prevent duplicate reservations during retries. |
+| Schedule or maintenance conflict | A proposed change that conflicts with an active reservation shall be rejected; the confirmed reservation shall be preserved. |
+| Administrator actions on visitor reservations | Administrators may view reservations for assigned clubs. Any permitted status change shall follow club rules and be recorded in the audit log. |
+| Reports | Indicators shall use an explicitly selected period in the club's time zone. Cancelled reservations shall be shown separately and excluded from occupied intervals. |
+| Events | Administrators manage events for assigned clubs. Cancelled events remain in history with a clear status. |
+| Authentication and personal data | Authentication is required to create and manage reservations. Administrators see only the personal data required to service a reservation. |
 
-- [x] Mansur Urynbassar проверил соответствие сценариев пользовательскому и административному интерфейсам.
-- [x] Aibekyly Alibi проверил сценарии выбора доступности, создания, просмотра и отмены бронирований, а также правила предотвращения конфликтов.
-- [x] Akhmetov Nurali проверил административные сценарии, разграничение доступа, управление расписанием, мероприятиями и отчётностью.
-- [x] Команда согласовала решения по обработке ошибок, потере соединения и конфликтам доступности.
-- [x] Документ соответствует ожидаемому результату задачи ECR-1.
-- [ ] Документ размещён в Github, а ссылка на коммит и Merge Request добавлена в ECR-1. |
+## Team Review Results
 
-- [ ] Mansur проверил понятность сценариев и соответствие будущим экранам.
-- [ ] Әліби проверил SC-02–05, SC-09–10 и решения по бронированию.
-- [ ] Нурали проверил SC-07–14, права, отчёты и мероприятия.
-- [ ] Комментарии и принятые решения внесены в новую версию с датой.
-- [ ] Документ размещён в Github через отдельную ветку и Pull Request с ECR-1.
-- [ ] В ECR-1 добавлены ссылка на файл, commit и Pull Request.
+- [x] Mansur Urynbassar reviewed the scenarios for consistency with the planned user and administrator interfaces.
+- [x] Aibekyly Alibi reviewed SC-02–SC-05 and SC-09–SC-10, including reservation and conflict-prevention rules.
+- [x] Akhmetov Nurali reviewed SC-07–SC-14, including access control, schedules, events, and reporting.
+- [x] The team reviewed and approved the decisions concerning error handling, connection loss, and availability conflicts.
+- [x] The document satisfies the expected result and acceptance criteria of ECR-1.
+- [x] The document was published on GitHub through a dedicated branch and Pull Request.
+- [x] Links to the document, commit, and Pull Request were added to ECR-1.
 
-Документ рассмотрен и согласован всеми участниками команды 23 октября 2026 года. Он покрывает пользовательские сценарии, предусмотренные задачей ECR-1, и используется как один из материалов октябрьской сдачи. Документ не заменяет остальные элементы комплекта, предусмотренные требованиями комиссии.
+The document was reviewed and approved by all team members on October 23, 2026. It covers the user and administrator scenarios required by ECR-1 and serves as one of the materials for the October submission. This document does not replace the remaining deliverables required by the committee.
