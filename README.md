@@ -1,73 +1,75 @@
 # CyberSeat
 
-## Информационная система управления бронированием игровых мест в киберспортивных центрах
+## Information System for Managing Gaming Station Reservations in Esports Centres
 
-Дипломный проект по образовательной программе **Software Engineering**, Astana IT University.
+CyberSeat is a diploma project developed within the **Software Engineering** programme at Astana IT University.
 
-| Сведения | Значение |
+| Item | Details |
 |---|---|
-| Группа | SE-2404 |
-| Научный руководитель | Мырзакерімова Алуа Бауыржанқызы |
-| Участники | Айбекұлы Әліби, Ахметов Нурали Канатович, Урынбасар Мансұр Мұхтарұлы |
-| Этап проекта | Проектирование и подготовка к апробации |
+| Group | SE-2404 |
+| Supervisor | Myrzakerimova Alua |
+| Team members | Aibekuly Alibi, Akhmetov Nurali, Mansur Urynbassar |
+| Current stage | Analysis, design, and preparation for initial evaluation |
 
-## О проекте
+## Project Overview
 
-CyberSeat - проект веб-системы для поиска киберспортивных центров, просмотра доступных игровых мест и бронирования времени посещения. Предусматриваются пользовательский интерфейс, административная панель и единая база данных.
+CyberSeat is a proposed web-based system for finding esports centres, viewing the availability and specifications of gaming stations, and reserving visit intervals. The planned solution includes a visitor-facing interface, an administration panel, a server application, and a shared relational database.
 
-Система ориентирована на посетителей компьютерных и консольных клубов, администраторов и управляющих несколькими площадками.
+The system is intended for visitors to PC and console gaming clubs, club administrators, and managers responsible for multiple venues.
 
-## Проблема и цель
+## Problem Statement and Aim
 
-При обработке заявок через звонки, переписку и отдельные таблицы информация о доступности мест может расходиться с фактическим расписанием. Параллельные обращения создают риск пересекающихся бронирований, а разрозненный учёт затрудняет анализ загрузки.
+When reservations are handled through phone calls, messaging applications, and separate spreadsheets, the displayed availability may differ from the actual schedule. Concurrent requests increase the risk of overlapping reservations, while fragmented records make utilisation analysis difficult.
 
-**Цель проекта** - разработать и проверить информационную систему, объединяющую поиск доступных мест, бронирование временных интервалов и управление клубами с разграничением прав доступа.
+**Project aim:** to design, implement, and evaluate an information system that combines the search for available gaming stations, interval-based reservations, and club management with role-based access control.
 
-Практическая значимость проекта заключается в сокращении ручных операций при оформлении брони и обеспечении согласованности расписания. Потребности пользователей и применимость предлагаемых решений планируется проверить интервью и оценкой прототипа.
+The expected practical benefit is a reduction in manual reservation operations and improved schedule consistency. User needs and the suitability of the proposed interaction design will be evaluated through interviews and prototype assessment.
 
-## Планируемая функциональность
+## Scope and Planned Functionality
 
-| Пользователь | Возможности |
+| User role | Planned capabilities |
 |---|---|
-| Гость | Просмотр каталога клубов, характеристик игровых мест и доступности |
-| Посетитель | Создание и отмена собственных бронирований, просмотр истории и календаря мероприятий |
-| Администратор клуба | Управление местами, расписанием и бронированиями своего клуба; блокировка интервалов; просмотр отчётов |
-| Суперадминистратор | Управление клубами и назначение администраторов |
+| Guest | Browse the club catalogue, gaming-station specifications, and availability |
+| Registered visitor | Create and cancel personal reservations, view reservation history, and browse the event calendar |
+| Club administrator | Manage stations, schedules, reservations, unavailable intervals, events, and reports for assigned clubs |
+| System administrator | Manage clubs and administrator assignments |
 
-### Основной пользовательский сценарий
+### Primary User Flow
 
-**Выбор клуба → дата и время → свободное место → подтверждение бронирования → просмотр в личном кабинете.**
+**Select a club -> choose a date and time -> select an available station -> confirm the reservation -> view it in the personal account.**
 
-Перед подтверждением система должна повторно проверять доступность места. При конфликте пользователю предлагается изменить место или время.
+Before confirmation, the server must recheck station availability. If a conflict is detected, the user is asked to select another station or time.
 
-### Пользовательский интерфейс
+Detailed visitor and administrator scenarios are documented in [User and Administrator Scenarios](docs/requirements/user-scenarios.md).
 
-Планируются следующие основные экраны:
+### Planned User Interface
 
-- Каталог с фильтрами по клубу, времени и характеристикам мест.
-- Страница клуба с адресом, оборудованием и схемой зала.
-- Выбор места и подтверждение бронирования.
-- Личный кабинет с активными и прошлыми бронированиями.
-- Календарь турниров и мероприятий.
-- Административное расписание и отчёты.
+The principal planned screens are:
 
-Интерфейс проектируется для компьютеров и мобильных устройств. Статусы мест должны обозначаться текстом и цветом; формы должны учитывать ошибки, загрузку и отсутствие доступных вариантов.
+- A club catalogue with filters for club, time, and station specifications.
+- A club page containing its address, equipment information, working hours, and floor layout.
+- Station selection and reservation confirmation.
+- A personal account containing active and previous reservations.
+- A tournament and event calendar.
+- Administrative schedule, station-management, event-management, and reporting screens.
 
-## Архитектура
+The interface is intended for desktop and mobile devices. Station statuses must be communicated through both text and colour. Forms and data views must provide distinct states for loading, validation errors, empty results, server failures, and connection loss.
 
-Предлагается архитектура модульного монолита: отдельный веб-клиент, серверное приложение с REST API и реляционная база данных.
+## Proposed Architecture
+
+The proposed solution follows a modular-monolith architecture with a separate web client, a server application exposing a REST API, and a relational database.
 
 ```mermaid
 flowchart LR
-    Users["Посетители и администраторы"] --> UI["Веб-интерфейс<br/>React / TypeScript"]
+    Users["Visitors and administrators"] --> UI["Web interface<br/>React / TypeScript"]
     UI --> API["REST API<br/>FastAPI"]
 
-    subgraph Server["Серверные модули"]
-        Access["Пользователи и права доступа"]
-        Clubs["Клубы и игровые места"]
-        Booking["Расписание и бронирование"]
-        Events["Мероприятия"]
-        Reports["Отчёты и журнал действий"]
+    subgraph Server["Server modules"]
+        Access["Users and access control"]
+        Clubs["Clubs and gaming stations"]
+        Booking["Schedules and reservations"]
+        Events["Events"]
+        Reports["Reports and audit log"]
     end
 
     API --> Access
@@ -82,116 +84,125 @@ flowchart LR
     Reports --> DB
 ```
 
-Сервер отвечает за бизнес-правила, проверку доступа и выполнение транзакций. База данных обеспечивает связи и ограничения целостности. Модульная структура позволяет разделить работу участников и сохранить единый механизм обработки бронирований.
+The server is responsible for business rules, authorisation checks, and transactional operations. PostgreSQL provides data relationships and integrity constraints. The modular structure separates the team's areas of responsibility while preserving a single reservation-processing mechanism.
 
-### Основные сущности данных
+### Principal Data Entities
 
-Пользователь, клуб, назначение администратора, игровое место, рабочее расписание, интервал недоступности, бронирование, мероприятие и запись журнала действий.
+The initial domain model includes a user, club, administrator assignment, gaming station, working schedule, unavailable interval, reservation, event, and audit-log entry.
 
-### Ключевые требования
+### Key Requirements
 
-- Отсутствие пересекающихся действующих броней одного места, включая одновременные запросы.
-- Соответствие бронирования рабочему расписанию и ограничениям доступности.
-- Сохранение истории отменённых броней с освобождением занятого интервала.
-- Доступ посетителя только к собственным бронированиям.
-- Доступ администратора только к закреплённым за ним клубам.
-- Согласованная обработка бронирований и блокировок мест на обслуживание.
-- Учёт часового пояса клуба при отображении даты и времени.
+- Active reservations for the same station must not overlap, including when requests are submitted concurrently.
+- Every reservation must comply with the club's working schedule and unavailable intervals.
+- A cancelled reservation must remain in history while releasing the occupied interval.
+- A visitor may access only their own reservations.
+- A club administrator may access only clubs assigned to them.
+- Reservation creation and maintenance blocking must use consistent conflict rules.
+- Dates and times must be displayed in the selected club's time zone.
 
-Защита от конфликтующих бронирований предусматривается на уровне транзакций и ограничений PostgreSQL. Предварительная проверка доступности в интерфейсе не является единственным механизмом защиты.
+Protection against conflicting reservations is planned at the transaction and database-constraint levels. A preliminary availability check in the user interface is not the sole protection mechanism.
 
-## Планируемый технологический стек
+## Proposed Technology Stack
 
-| Компонент | Технологии |
+| Component | Technologies |
 |---|---|
-| Пользовательский интерфейс | React, TypeScript, Vite |
-| Серверная часть | Python, FastAPI, Pydantic |
-| База данных | PostgreSQL |
-| Доступ к данным и миграции | SQLAlchemy, Alembic |
-| Проверка серверной части | Pytest |
-| Проверка интерфейса | Vitest, Testing Library, Playwright |
-| Нагрузочные испытания | k6 |
-| Окружение приложения | Docker Compose |
-| Контроль версий и управление задачами | GitLab, YouTrack |
+| Web interface | React, TypeScript, Vite |
+| Server application | Python, FastAPI, Pydantic |
+| Database | PostgreSQL |
+| Data access and migrations | SQLAlchemy, Alembic |
+| Server-side testing | Pytest |
+| Interface testing | Vitest, Testing Library, Playwright |
+| Load testing | k6 |
+| Application environment | Docker Compose |
+| Version control and task management | GitHub, YouTrack |
 
-## Индивидуальный вклад участников
+The technology choices remain subject to the documented comparison of alternatives and may be refined during the design stage.
 
-В таблице приведено распределение ответственности и планируемых результатов.
+## Team Responsibilities
 
-| Участник | Зона ответственности | Результаты работы |
+The following table defines the planned individual responsibilities and deliverables.
+
+| Team member | Area of responsibility | Planned deliverables |
 |---|---|---|
-| Айбекұлы Әліби | База данных и модуль бронирования | ER-диаграмма, миграции, API создания и отмены бронирований, защита от пересечений, интеграционные и нагрузочные тесты |
-| Ахметов Нурали Канатович | Административная серверная часть | Роли и права доступа, управление клубами и расписанием, отчётность, проверки административных операций |
-| Урынбасар Мансұр Мұхтарұлы | Пользовательский и административный интерфейсы | Макеты и экраны приложения, интеграция с API, интерфейс календаря мероприятий, проверки пользовательских сценариев |
+| Aibekuly Alibi | Database and reservation module | ER diagram, migrations, reservation creation and cancellation API, overlap prevention, integration tests, and load tests |
+| Akhmetov Nurali | Administrative server functionality | Roles and permissions, club and schedule management, reporting, and verification of administrative operations |
+| Mansur Urynbassar | Visitor and administrator interfaces | UX mockups, application screens, API integration, event-calendar interface, and verification of user scenarios |
 
-Задачи ведутся в общем проекте YouTrack с префиксом **ECR**. Номера задач используются в названиях веток и Merge Request для связи запланированных работ с изменениями в репозитории.
+Tasks are managed in the shared YouTrack project using the **ECR** prefix. Task identifiers are included in branch names, commit messages, and Pull Request descriptions to connect planned work with repository changes.
 
-## План оценки результатов
+## Verification and Evaluation Overview
 
-| Направление | Способ проверки | Критерий |
+| Area | Planned method | Evaluation criterion |
 |---|---|---|
-| Бронирование | Интеграционные тесты создания и отмены | Корректное изменение статуса и доступности |
-| Конкурентные запросы | Одновременное бронирование одного места на пересекающиеся интервалы | Не более одной подтверждённой брони |
-| Разграничение доступа | Запросы к собственным и чужим данным от разных ролей | Отсутствие несанкционированного доступа |
-| Отчётность | Сравнение с контрольным набором данных | Совпадение рассчитанных показателей с ожидаемыми |
-| Производительность | Нагрузочные испытания API | Измерение времени ответа, пропускной способности и доли ошибок при заданной нагрузке |
-| Удобство интерфейса | Выполнение типовых заданий пользователями | Измерение успешности, времени выполнения и числа ошибок |
+| Reservation workflow | Integration tests for creation and cancellation | Correct changes to reservation status and station availability |
+| Concurrent requests | Simultaneous requests for overlapping intervals at the same station | No more than one confirmed reservation |
+| Access control | Requests for owned and unowned resources from different roles | No unauthorised access |
+| Reporting | Comparison with a controlled data set | Calculated indicators match expected values |
+| Performance | API load testing | Response time, throughput, and error rate measured under a defined workload |
+| Interface usability | Users complete representative tasks | Task-success rate, completion time, and number of user errors |
 
-## Этапы реализации
+Detailed metrics, test conditions, and baseline comparisons are maintained in the project verification and evaluation plan.
 
-| Этап | Основной результат |
+## Development Stages
+
+| Stage | Expected outcome |
 |---|---|
-| Апробация, до 24 октября 2026 года | Обоснование проекта, обзор литературы и аналогов, требования, архитектурные схемы, UX-прототип и план проверки |
-| Основа приложения | Модель данных, миграции, аутентификация, каталог клубов и мест |
-| MVP | Полный цикл бронирования, личный кабинет, минимальная административная панель и защита от пересечений |
-| Развитие дипломной версии | Схема зала, календарь мероприятий, отчёты и журнал действий |
-| Итоговая проверка | Результаты испытаний, доработанный интерфейс, документация и демонстрационная версия |
+| Initial evaluation by October 24, 2026 | Project justification, literature and existing-system reviews, requirements, architectural diagrams, UX prototype, and evaluation plan |
+| Application foundation | Data model, migrations, authentication, and the club and station catalogue |
+| Minimum viable product | Complete reservation workflow, personal account, initial administration panel, and overlap prevention |
+| Diploma-version development | Floor layout, event calendar, reporting, and audit log |
+| Final evaluation | Test results, refined interface, complete documentation, and a demonstrable system |
 
-Онлайн-оплата, программа лояльности и управление оборудованием не входят в обязательный объём текущего проекта.
+Online payments, a loyalty programme, and hardware management are outside the mandatory project scope.
 
-## Настройка и локальный запуск
+## Setup and Local Execution
 
-Проект находится на этапе проектирования. Ниже приведён план локального окружения; точные версии, команды и адреса сервисов будут зафиксированы после проверки первого работающего прототипа.
+The project is currently in the analysis and design stage. The following section describes the planned local environment. Exact versions, commands, service addresses, and test instructions will be added after the first runnable prototype has been verified.
 
-### Окружение
+### Planned Environment
 
-Для основного варианта запуска планируются Git, Docker и Docker Compose. В состав окружения войдут веб-клиент, серверное приложение и PostgreSQL.
+The primary execution method is planned to use Git, Docker, and Docker Compose. The environment will include the web client, server application, and PostgreSQL.
 
-Для разработки вне контейнеров потребуются Python, Node.js и PostgreSQL совместимых версий, указанных в файлах зависимостей проекта.
+Development without containers will require compatible versions of Python, Node.js, and PostgreSQL, which will be specified in the dependency files.
 
-### Настройка
+### Planned Configuration
 
-- Параметры подключения к базе данных и настройки приложения будут описаны в `.env.example`.
-- Локальные значения будут храниться в `.env`, исключённом из системы контроля версий.
-- Схема базы данных будет создаваться и обновляться миграциями Alembic.
-- Для демонстрации планируется отдельный набор тестовых клубов, мест и пользователей с разными ролями.
+- Database connection parameters and application settings will be documented in `.env.example`.
+- Local values will be stored in `.env`, which must be excluded from version control.
+- The database schema will be created and updated through Alembic migrations.
+- A separate demonstration data set will include sample clubs, stations, and users with different roles.
 
-### Порядок запуска прототипа
+### Planned Prototype Execution
 
-1. Получить исходный код из репозитория.
-2. Подготовить локальную конфигурацию по `.env.example`.
-3. Запустить PostgreSQL и применить миграции.
-4. Загрузить демонстрационные данные.
-5. Запустить серверную часть и веб-интерфейс.
-6. Проверить сценарий поиска, создания и отмены бронирования.
+1. Clone the repository.
+2. Prepare the local configuration using `.env.example`.
+3. Start PostgreSQL and apply the migrations.
+4. Load the demonstration data.
+5. Start the server application and web interface.
+6. Verify the search, reservation creation, and reservation cancellation flow.
 
-Проверенная инструкция с командами запуска, адресами интерфейса и API, а также порядком запуска тестов будет добавлена вместе с первым прототипом.
+Verified commands, interface and API addresses, and test instructions will be added with the first working prototype.
 
-## Материалы проекта
+## Project Resources
 
-- [Основной репозиторий GitLab](https://gitlab.com/astana-it-university-group3/cyberseat-booking-system).
-- Общий проект YouTrack: ECR; https://nerybr.youtrack.cloud/agiles/204-1/current.
+- [Main GitHub repository](./)
+- [YouTrack Agile board](https://nerybr.youtrack.cloud/agiles/204-1/current)
+- [User and Administrator Scenarios](docs/requirements/user-scenarios.md)
 
-Планируемое размещение материалов в репозитории:
+## Planned Repository Structure
 
-| Каталог | Содержание |
+| Directory | Purpose |
 |---|---|
-| `backend/` | Серверная часть, миграции и серверные тесты |
-| `frontend/` | Пользовательский и административный интерфейсы |
-| `tests/` | Сквозные и нагрузочные испытания |
-| `docs/requirements/` | Требования и критерии приёмки |
-| `docs/research/` | Обзор литературы и сравнение аналогов |
-| `docs/diagrams/` | Архитектурные схемы и ER-диаграмма |
-| `docs/ux/` | Макеты интерфейса |
-| `docs/testing/` | План и результаты испытаний |
-| `docs/report/` | Отчёт к апробационному периоду |
+| `backend/` | Server application, migrations, and server-side tests |
+| `frontend/` | Visitor and administrator web interfaces |
+| `tests/` | End-to-end and load-testing materials |
+| `docs/requirements/` | Requirements and acceptance criteria |
+| `docs/research/` | Literature review and comparison of existing systems |
+| `docs/diagrams/` | Architectural diagrams and ER diagram |
+| `docs/ux/` | UX mockups and prototype materials |
+| `docs/testing/` | Verification plan and test results |
+| `docs/report/` | Initial-evaluation and pre-defence reports |
+
+## Current Limitations
+
+The repository currently contains analysis, design, and planning materials. A complete application, final test results, and confirmed execution instructions are not yet available. These outputs will be added progressively during the implementation and evaluation stages.
