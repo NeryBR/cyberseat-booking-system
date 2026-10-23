@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1100" height="810" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1100 810" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1100" height="810"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-810)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="35" y="776" style="font-family: Helvetica-Bold; font-size: 24px;fill: rgb(6%,15%,24%); stroke:none;" transform="translate(0,1552) scale(1,-1)">CYBERSEAT / COMPONENT OVERVIEW</text>
+			<text x="35" y="748" style="font-family: Helvetica; font-size: 13px;fill: rgb(12%,21%,30%); stroke:none;" transform="translate(0,1496) scale(1,-1)">Logical modules within one server deployment - proposed design</text>
+			<rect x="365" y="650" width="370" height="65" rx="9" ry="9" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1.2; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="472.306" y="690.5" style="font-family: Helvetica; font-size: 12px;fill: rgb(12%,21%,30%); stroke:none;" transform="translate(0,1381) scale(1,-1)">React / TypeScript web client</text>
+			<text x="468.64599999999996" y="674.5" style="font-family: Helvetica; font-size: 12px;fill: rgb(12%,21%,30%); stroke:none;" transform="translate(0,1349) scale(1,-1)">Visitor and administrator views</text>
+			<rect x="25" y="155" width="1050" height="460" rx="15" ry="0" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,97%,98%); fill-rule: evenodd; stroke-dasharray: 7, 4;"/>
+			<text x="45" y="590" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(6%,15%,24%); stroke:none;" transform="translate(0,1180) scale(1,-1)">FastAPI modular monolith / one deployment</text>
+			<rect x="365" y="485" width="370" height="70" rx="9" ry="9" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1.2; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="493.306" y="528.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(12%,21%,30%); stroke:none;" transform="translate(0,1056) scale(1,-1)">REST API / OpenAPI</text>
+			<text x="437.614" y="512.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(12%,21%,30%); stroke:none;" transform="translate(0,1024) scale(1,-1)">Validation, safe errors and request identity</text>
+			<path d="M 550,650 L 550,555 Z" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1.3;"/>
+			<polygon points="550 555, 553.1153 562.3685, 546.8847 562.3685" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(13%,39%,67%); fill-rule: evenodd;"/>
+			<text x="516.105" y="609.5" style="font-family: Helvetica; font-size: 10px;fill: rgb(12%,21%,30%); stroke:none;" transform="translate(0,1219) scale(1,-1)">HTTPS / JSON</text>
+			<rect x="45" y="330" width="155" height="80" rx="9" ry="9" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1.2; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="71.14" y="378.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(12%,21%,30%); stroke:none;" transform="translate(0,756) scale(1,-1)">Identity and access</text>
+			<text x="68.482" y="362.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(12%,21%,30%); stroke:none;" transform="translate(0,724) scale(1,-1)">Owner / club checks</text>
+			<path d="M 550,485 L 122.5,410 Z" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1.3;"/>
+			<polygon points="122.5 410, 130.296 408.2048, 129.2193 414.3418" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(13%,39%,67%); fill-rule: evenodd;"/>
+			<path d="M 122.5,330 L 122.5,270 Z" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1.3;"/>
+			<polygon points="122.5 270, 125.6153 277.3685, 119.3847 277.3685" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(13%,39%,67%); fill-rule: evenodd;"/>
+			<rect x="220" y="330" width="155" height="80" rx="9" ry="9" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1.2; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="248.144" y="378.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(12%,21%,30%); stroke:none;" transform="translate(0,756) scale(1,-1)">Clubs and stations</text>
+			<text x="252.14" y="362.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(12%,21%,30%); stroke:none;" transform="translate(0,724) scale(1,-1)">Catalogue / zone</text>
+			<path d="M 550,485 L 297.5,410 Z" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1.3;"/>
+			<polygon points="297.5 410, 305.4505 409.1117, 303.6764 415.0845" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(13%,39%,67%); fill-rule: evenodd;"/>
+			<path d="M 297.5,330 L 297.5,270 Z" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1.3;"/>
+			<polygon points="297.5 270, 300.6153 277.3685, 294.3847 277.3685" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(13%,39%,67%); fill-rule: evenodd;"/>
+			<rect x="395" y="330" width="155" height="80" rx="9" ry="9" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1.2; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="437.49" y="378.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(12%,21%,30%); stroke:none;" transform="translate(0,756) scale(1,-1)">Reservations</text>
+			<text x="422.82" y="362.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(12%,21%,30%); stroke:none;" transform="translate(0,724) scale(1,-1)">Availability / replay</text>
+			<path d="M 550,485 L 472.5,410 Z" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1.3;"/>
+			<polygon points="472.5 410, 479.9615 412.8855, 475.6285 417.3629" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(13%,39%,67%); fill-rule: evenodd;"/>
+			<path d="M 472.5,330 L 472.5,270 Z" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1.3;"/>
+			<polygon points="472.5 270, 475.6153 277.3685, 469.3847 277.3685" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(13%,39%,67%); fill-rule: evenodd;"/>
+			<rect x="570" y="330" width="155" height="80" rx="9" ry="9" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1.2; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="596.152" y="378.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(12%,21%,30%); stroke:none;" transform="translate(0,756) scale(1,-1)">Club administration</text>
+			<text x="580.1320000000001" y="362.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(12%,21%,30%); stroke:none;" transform="translate(0,724) scale(1,-1)">Schedules / maintenance</text>
+			<path d="M 550,485 L 647.5,410 Z" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1.3;"/>
+			<polygon points="647.5 410, 643.559 416.9619, 639.7601 412.0233" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(13%,39%,67%); fill-rule: evenodd;"/>
+			<path d="M 647.5,330 L 647.5,270 Z" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1.3;"/>
+			<polygon points="647.5 270, 650.6153 277.3685, 644.3847 277.3685" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(13%,39%,67%); fill-rule: evenodd;"/>
+			<rect x="745" y="330" width="155" height="80" rx="9" ry="9" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1.2; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="804.158" y="378.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(12%,21%,30%); stroke:none;" transform="translate(0,756) scale(1,-1)">Events</text>
+			<text x="775.148" y="362.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(12%,21%,30%); stroke:none;" transform="translate(0,724) scale(1,-1)">Informational only</text>
+			<path d="M 550,485 L 822.5,410 Z" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1.3;"/>
+			<polygon points="822.5 410, 816.2224 414.959, 814.569 408.9517" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(13%,39%,67%); fill-rule: evenodd;"/>
+			<path d="M 822.5,330 L 822.5,270 Z" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1.3;"/>
+			<polygon points="822.5 270, 825.6153 277.3685, 819.3847 277.3685" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(13%,39%,67%); fill-rule: evenodd;"/>
+			<rect x="920" y="330" width="155" height="80" rx="9" ry="9" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1.2; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="950.142" y="378.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(12%,21%,30%); stroke:none;" transform="translate(0,756) scale(1,-1)">Reports and audit</text>
+			<text x="958.152" y="362.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(12%,21%,30%); stroke:none;" transform="translate(0,724) scale(1,-1)">Queries / trace</text>
+			<path d="M 550,485 L 997.5,410 Z" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1.3;"/>
+			<polygon points="997.5 410, 990.7478 414.2904, 989.7179 408.1455" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(13%,39%,67%); fill-rule: evenodd;"/>
+			<path d="M 997.5,330 L 997.5,270 Z" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1.3;"/>
+			<polygon points="997.5 270, 1000.615 277.3685, 994.3847 277.3685" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(13%,39%,67%); fill-rule: evenodd;"/>
+			<rect x="45" y="190" width="1030" height="80" rx="9" ry="9" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1.2; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="440.942" y="238.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(12%,21%,30%); stroke:none;" transform="translate(0,476) scale(1,-1)">Shared transaction coordinator / data access</text>
+			<text x="374.924" y="222.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(12%,21%,30%); stroke:none;" transform="translate(0,444) scale(1,-1)">Club then station guards - operation identity - revalidation - migrations</text>
+			<rect x="285" y="35" width="530" height="80" rx="9" ry="9" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1.2; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="517.318" y="83.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(12%,21%,30%); stroke:none;" transform="translate(0,166) scale(1,-1)">PostgreSQL</text>
+			<text x="406.606" y="67.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(12%,21%,30%); stroke:none;" transform="translate(0,134) scale(1,-1)">Domain records, operation keys, constraints and audit</text>
+			<path d="M 550,190 L 550,115 Z" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1.3;"/>
+			<polygon points="550 115, 553.1153 122.3685, 546.8847 122.3685" style="stroke: rgb(13%,39%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(13%,39%,67%); fill-rule: evenodd;"/>
+			<text x="511.65" y="159.5" style="font-family: Helvetica; font-size: 10px;fill: rgb(12%,21%,30%); stroke:none;" transform="translate(0,319) scale(1,-1)">SQL transactions</text>
+		</g>
+	</g>
+</svg>

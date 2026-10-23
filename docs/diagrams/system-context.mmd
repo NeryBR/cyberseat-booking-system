@@ -1,0 +1,9 @@
+flowchart LR
+    G["Guest"] -->|Browse clubs and availability| CS
+    V["Registered visitor"] -->|Reserve, view and cancel own bookings| CS
+    A["Club administrator"] -->|Manage assigned-club operations and reports| CS
+    S["System administrator"] -->|Manage clubs and administrator assignments| CS
+    E["Organiser / public event notice"] -.->|Information manually verified and entered| A
+    subgraph B["CyberSeat system boundary"]
+        CS["CyberSeat web information system<br/>Catalogue, reservations, administration,<br/>informational events and reports"]
+    end

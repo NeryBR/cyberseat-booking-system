@@ -188,6 +188,7 @@ Verified commands, interface and API addresses, and test instructions will be ad
 - [Main GitHub repository](./)
 - [YouTrack Agile board](https://nerybr.youtrack.cloud/agiles/204-1/current)
 - [User and Administrator Scenarios](docs/requirements/user-scenarios.md)
+- [Alibi's October 24 deliverables](docs/report/alibi-deliverables.md): proposal, critical literature review, technology comparison, booking requirements and architectural diagrams. Prepared for team review.
 
 ## Planned Repository Structure
 
