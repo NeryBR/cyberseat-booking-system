@@ -1,0 +1,17 @@
+flowchart TB
+    UI["React / TypeScript web client<br/>Visitor and admin views"] -->|HTTPS / JSON| API
+    subgraph SERVER["FastAPI modular monolith - one deployment"]
+        API["REST API / OpenAPI<br/>Validation and safe errors"] --> IAM["Identity and access<br/>Owner and assigned-club checks"]
+        API --> CAT["Clubs and stations"]
+        API --> BOOK["Reservations and availability"]
+        API --> ADMIN["Club administration<br/>Schedules and maintenance"]
+        API --> EVENTS["Informational events"]
+        API --> REP["Reports and audit"]
+        IAM --> DATA["Shared transaction coordinator / data access<br/>Club then station guards; replay identity"]
+        CAT --> DATA
+        BOOK --> DATA
+        ADMIN --> DATA
+        EVENTS --> DATA
+        REP --> DATA
+    end
+    DATA -->|SQL transactions and constraints| DB[("PostgreSQL<br/>Domain records, operation keys and audit")]
