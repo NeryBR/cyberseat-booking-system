@@ -1,8 +1,8 @@
 # CyberSeat - Critical Literature Review
 
-Version 1.0 | October 23, 2026 | Owner: Aibekuly Alibi | [ECR-4](https://nerybr.youtrack.cloud/issue/ECR-4)
+Version 1.1 | October 23, 2026 | Owner: Aibekuly Alibi | [ECR-4](https://nerybr.youtrack.cloud/issue/ECR-4)
 
-Status: prepared for team review. This focused engineering review supports the booking module and its quality requirements. It is not a systematic review, a market study or evidence of user interviews.
+Status: documentation completed; team agreement confirmed by Alibi on October 23, 2026. This focused engineering review supports the booking module and its quality requirements. It is not a systematic review, a market study or evidence of user interviews.
 
 ## 1. Questions and selection method
 
@@ -63,4 +63,4 @@ S12 requires a server authorisation decision for each resource operation. UI hid
 | Resource access depends on actor and object | Server owner/assignment checks | BR-07/08, NFR-02; foreign-resource negative tests |
 | Perceived usability is only one quality dimension | Task metrics plus questionnaire and accessibility checks | NFR-06/07; formative prototype study |
 
-Important gaps remain: no verified local demand or club workflow observations; no executed CyberSeat benchmark; no chosen final authentication mechanism; no complete accessibility audit; and limited domain-specific empirical research in this focused review. ECR-3 and ECR-5 must add field evidence and product comparison. Mansur is requested to review the UX interpretation; Nurali is requested to review authorisation and reporting implications. Their review of this document is pending.
+Important gaps remain: no verified local demand or club workflow observations; no executed CyberSeat benchmark; no chosen final authentication mechanism; no complete accessibility audit; and limited domain-specific empirical research in this focused review. ECR-3 and ECR-5 must add field evidence and product comparison. Mansur is requested to review the UX interpretation; Nurali is requested to review authorisation and reporting implications. Alibi confirmed his teammates' agreement with the prepared materials in the working chat on October 23, 2026.

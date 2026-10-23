@@ -1,8 +1,8 @@
 # CyberSeat - Technology Comparison and Decision Record
 
-Version 1.0 | October 23, 2026 | Owner: Aibekuly Alibi | [ECR-6](https://nerybr.youtrack.cloud/issue/ECR-6)
+Version 1.1 | October 23, 2026 | Owner: Aibekuly Alibi | [ECR-6](https://nerybr.youtrack.cloud/issue/ECR-6)
 
-Status: proposed decisions, prepared for team review. No technology benchmark, implementation or newly obtained teammate approval is claimed. The baseline matches the current README.
+Status: proposed decisions, team agreement confirmed by Alibi on October 23, 2026. No technology benchmark or implementation is claimed; team agreement is recorded from Alibi's report. The baseline matches the current README.
 
 ## 1. Evaluation basis
 
@@ -54,7 +54,7 @@ Sources: [HTTP semantics, RFC 9110](https://httpwg.org/specs/rfc9110.html), [Gra
 
 **D4, existing baseline:** React, TypeScript and Vite for visitor/admin interfaces. React's component model and TypeScript's static checks fit reuse across catalogue, forms and admin views, but do not validate incoming data or authorise requests. Vue with TypeScript is a credible component-based alternative; server-rendered templates reduce a separate client build but fit less directly with the existing interface ownership and API plan. Keeping the documented baseline avoids a speculative redesign. Sources: [React documentation](https://react.dev/learn), [TypeScript handbook](https://www.typescriptlang.org/docs/handbook/intro.html), [Vue guide](https://vuejs.org/guide/introduction.html).
 
-React/TypeScript appears in the current README and ECR-1 interface baseline. **Mansur's explicit confirmation of this comparison and its tradeoffs is still pending**; no new agreement is claimed. Before implementation, request review of forms, error handling, API models and accessibility behaviour.
+React/TypeScript appears in the current README and ECR-1 interface baseline. **Alibi confirmed on October 23, 2026 that his teammates agree with the prepared materials**, including this comparison. The agreement is recorded from Alibi's report rather than a separate GitHub review. Before implementation, request review of forms, error handling, API models and accessibility behaviour.
 
 **D5, provisional tooling:** SQLAlchemy with Alembic migrations, Pytest for real-DB integration tests, Playwright for browser scenarios and k6 for load generation, consistent with the README. Pin compatible versions only after the first reproducible environment is validated. Docker Compose will describe the local client/API/database environment. It is sufficient for a demo, but does not establish production availability, backups or disaster recovery.
 
@@ -68,4 +68,4 @@ React/TypeScript appears in the current README and ECR-1 interface baseline. **M
 | Durable owner + operation-key deduplication | BR-06/11 | Storage and reconciliation contract | Retention/deletion policy is introduced |
 | REST/OpenAPI | BR-03/07/08, NFR-08 | Some view-specific request composition | Measured over-fetching or integration requirements justify GraphQL or push |
 
-The first implementation spike must prove migration support, concurrent creation, maintenance coordination, cancellation, and replay after response loss on actual PostgreSQL. Framework validation and an in-memory SQLite test cannot substitute for that evidence. Authentication/session choice, deployment host, exact versions and measured resource requirements remain open implementation decisions. Reviewer requested: Mansur for D4/API interaction; Nurali for D1 and administrative transaction use. Review pending.
+The first implementation spike must prove migration support, concurrent creation, maintenance coordination, cancellation, and replay after response loss on actual PostgreSQL. Framework validation and an in-memory SQLite test cannot substitute for that evidence. Authentication/session choice, deployment host, exact versions and measured resource requirements remain open implementation decisions. Reviewer requested: Mansur for D4/API interaction; Nurali for D1 and administrative transaction use. Team agreement confirmed through Alibi's report on October 23, 2026.

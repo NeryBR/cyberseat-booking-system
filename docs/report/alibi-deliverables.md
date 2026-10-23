@@ -12,7 +12,7 @@ Prepared October 23, 2026. Owner: Aibekuly Alibi. This index covers only the fiv
 
 The current repository is [GitHub](https://github.com/NeryBR/cyberseat-booking-system), consistent with ECR-1 completion evidence and the updated README. New content is in English. Existing team scenario and README files are preserved.
 
-Prepared materials are ready for human review. No new teammate or supervisor approval, implementation, executed load-test result or user interview is claimed. Card acceptance requires an identified reviewing participant, so the appropriate workflow state is Review until that review is recorded. Proposed numerical targets are labelled for agreement.
+Prepared materials are complete; Alibi confirmed his teammates' agreement on October 23, 2026. Team agreement is recorded from Alibi's report. No supervisor approval, implementation, executed load-test result or user interview is claimed. The five prepared documentation tasks can be marked Done on the basis of Alibi's confirmation. Proposed numerical targets are labelled for agreement.
 
 ## Team handoff dependencies
 

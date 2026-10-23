@@ -1,8 +1,8 @@
 # CyberSeat - System Context and Component Architecture
 
-Version 1.0 | October 23, 2026 | Owner: Aibekuly Alibi | [ECR-10](https://nerybr.youtrack.cloud/issue/ECR-10)
+Version 1.1 | October 23, 2026 | Owner: Aibekuly Alibi | [ECR-10](https://nerybr.youtrack.cloud/issue/ECR-10)
 
-Status: proposed architecture prepared for review. These are design views, not deployed services. Detailed ER design is a later ECR-12 deliverable.
+Status: proposed architecture; team agreement confirmed by Alibi on October 23, 2026. These are design views, not deployed services. Detailed ER design is a later ECR-12 deliverable.
 
 ## 1. Views and editable sources
 
@@ -76,4 +76,4 @@ The browser is untrusted; it has no database credentials and cannot commit direc
 - NFR-02 maps to resource/club checks in the API and domain operations.
 - Sources and exports are provided for both required views; ER details remain in ECR-12.
 
-Required human review: Mansur for client/API boundaries and failure states; Nurali for administrative writes, assignments and reporting. Their approval of this new architecture is pending. The diagrams do not replace Mansur's separate ECR-11 use-case diagram.
+Required human review: Mansur for client/API boundaries and failure states; Nurali for administrative writes, assignments and reporting. Alibi confirmed his teammates' agreement with the prepared architecture in the working chat on October 23, 2026. The diagrams do not replace Mansur's separate ECR-11 use-case diagram.

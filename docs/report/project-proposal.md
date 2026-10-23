@@ -1,8 +1,8 @@
 # CyberSeat - Project Proposal and Scope
 
-Version 1.0 | October 23, 2026 | Owner: Aibekuly Alibi | [ECR-2](https://nerybr.youtrack.cloud/issue/ECR-2)
+Version 1.1 | October 23, 2026 | Owner: Aibekuly Alibi | [ECR-2](https://nerybr.youtrack.cloud/issue/ECR-2)
 
-Status: prepared for team review. This is a design-stage proposal, not evidence of an implemented or evaluated product.
+Status: documentation completed; team agreement confirmed by Alibi on October 23, 2026. This is a design-stage proposal, not evidence of an implemented or evaluated product.
 
 ## 1. Project identity
 
@@ -77,7 +77,7 @@ No final experiment results are required or claimed at the initial submission. P
 
 The project depends on access to target users for ECR-3, team agreement on administrative rules in ECR-8, a hosting environment for the eventual prototype and supervisor review recorded in ECR-16. The main technical risks are interval races, inconsistent authorisation and scope growth; mitigations are shared transactional writes, negative access tests and the exclusions above. Real personal data is unnecessary for the October package.
 
-This proposal aligns with the current README and approved ECR-1 scenarios. Reviewer requested: Mansur for user flow/event scope and Nurali for administrative scope and evaluation alignment. Their review of this new proposal has not yet been recorded. Supervisor approval is not implied.
+This proposal aligns with the current README and approved ECR-1 scenarios. Reviewer requested: Mansur for user flow/event scope and Nurali for administrative scope and evaluation alignment. Alibi subsequently confirmed his teammates' agreement in the working chat on October 23, 2026. Supervisor approval is not implied.
 
 ## Related deliverables
 

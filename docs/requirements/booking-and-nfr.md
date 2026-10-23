@@ -1,8 +1,8 @@
 # CyberSeat - Booking and Non-functional Requirements
 
-Version 1.0 | October 23, 2026 | Owner: Aibekuly Alibi | [ECR-7](https://nerybr.youtrack.cloud/issue/ECR-7)
+Version 1.1 | October 23, 2026 | Owner: Aibekuly Alibi | [ECR-7](https://nerybr.youtrack.cloud/issue/ECR-7)
 
-Status: design baseline prepared for review. Must = mandatory for the core system; Should = desirable for the diploma version. Acceptance statements describe future verification, not tests already passed. Sources: [ECR-1 scenarios](user-scenarios.md), [proposal](../report/project-proposal.md), [research](../research/literature-review.md).
+Status: design baseline; team agreement confirmed by Alibi on October 23, 2026. Must = mandatory for the core system; Should = desirable for the diploma version. Acceptance statements describe future verification, not tests already passed. Sources: [ECR-1 scenarios](user-scenarios.md), [proposal](../report/project-proposal.md), [research](../research/literature-review.md).
 
 ## Domain semantics
 
@@ -58,7 +58,7 @@ Error bodies carry a stable machine code, safe message and correlation ID. The c
 | NFR-01 Must | Zero invariant violations in the defined concurrency suite | Real PostgreSQL, independent connections/API workers, synchronised race starts; 100 runs each for same-slot, partial overlap, booking vs maintenance, booking vs closure and cancel vs create; query DB state after each run |
 | NFR-02 Must | No unauthorised own-record or cross-club operation | Negative tests for unauthenticated, visitor A/B, assigned/unassigned administrator and system administrator; direct HTTP requests as well as UI checks. ECR-8 defines complete administrative permissions |
 | NFR-03 Must | Committed data survives API restart | Commit a booking, restart API, reconcile operation and read history; ID/status unchanged. Force failure before commit: neither booking nor success mapping remains |
-| NFR-04 Must | Draft performance target: p95 availability <=500 ms, creation/cancellation <=1000 ms; unexpected HTTP 5xx <1% | Dedicated 4-vCPU/8-GB host, local Docker network, one API service and PostgreSQL; 10 clubs, 500 stations, 100,000 reservations, 30-day horizon; 50 virtual users, 80% availability/10% creates/10% cancels, 2-min warmup and 10-min measured run, three runs. Report achieved request rate and raw results; classify expected 409 conflicts separately. Targets require team agreement |
+| NFR-04 Must | Draft performance target: p95 availability <=500 ms, creation/cancellation <=1000 ms; unexpected HTTP 5xx <1% | Dedicated 4-vCPU/8-GB host, local Docker network, one API service and PostgreSQL; 10 clubs, 500 stations, 100,000 reservations, 30-day horizon; 50 virtual users, 80% availability/10% creates/10% cancels, 2-min warmup and 10-min measured run, three runs. Report achieved request rate and raw results; classify expected 409 conflicts separately. Targets were accepted as proposed design targets according to Alibi's team-agreement report |
 | NFR-05 Must | Bounded contention and errors | Draft lock timeout 2 s, maximum 3 full-transaction retries for retryable deadlock/serialization failure with bounded backoff; exhaustion returns explicit retryable failure, never success. Timeouts and retry counts must be recorded with load results |
 | NFR-06 Must | Usable core flow at 360px and desktop width, with keyboard access | Check visible focus, meaningful labels and text statuses, field errors, no keyboard trap and no horizontal page overflow for core screens; use WCAG 2.2 AA as the design target, not a claim of certified conformance |
 | NFR-07 Should | Draft usability goal: at least 80% unassisted task completion | Recruit at least 5 relevant visitors; each finds a free station, books and cancels. Report per-task counts, time and errors plus SUS where appropriate. Small convenience samples are formative and cannot establish population-wide benefit |
@@ -66,7 +66,7 @@ Error bodies carry a stable machine code, safe message and correlation ID. The c
 | NFR-09 Must | Safe operational data handling | HTTPS in deployment; secrets excluded from source; credential/token values absent from error bodies and logs; server-side authorisation repeated on every operation. Authentication mechanism to be agreed in ECR-8 |
 | NFR-10 Must | Reports use defined denominators and consistent snapshots | Utilisation definition specifies booking statuses, time clipping and available station-minutes; compare with hand-calculated synthetic fixtures. Past end time alone does not prove attendance; occupancy reporting is scheduled utilisation, not measured actual usage |
 
-These numerical targets are explicit proposed evaluation conditions, not derived user evidence or measured performance. NFR-04 and NFR-07 require Nurali's evaluation-plan review and Mansur's UX review.
+These numerical targets are explicit proposed evaluation conditions, not derived user evidence or measured performance. NFR-04 and NFR-07 were included in Alibi's report of team agreement; ECR-13 should retain or explicitly revise their measurement conditions.
 
 ## Boundary examples for later tests
 
@@ -83,4 +83,4 @@ These numerical targets are explicit proposed evaluation conditions, not derived
 
 ## Review and dependencies
 
-Review requested: Nurali for BR-09/10, administrative write protocol and NFR-02/10; Mansur for BR-11/13/14 and interface feasibility. New-document approval is pending. ECR-8 must use the same guards for schedule/maintenance writes; ECR-13 must record agreed targets and executed test evidence later; ECR-12 must translate invariants into schema/migrations. The October deliverable is this specification with its acceptance criteria.
+Review requested: Nurali for BR-09/10, administrative write protocol and NFR-02/10; Mansur for BR-11/13/14 and interface feasibility. Alibi confirmed his teammates' agreement in the working chat on October 23, 2026. ECR-8 must use the same guards for schedule/maintenance writes; ECR-13 must record agreed targets and executed test evidence later; ECR-12 must translate invariants into schema/migrations. The October deliverable is this specification with its acceptance criteria.
