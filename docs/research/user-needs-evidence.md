@@ -176,11 +176,19 @@ Three anonymised discussions provide initial evidence that CyberSeat addresses a
 
 These findings support the planned visitor-facing functionality and refine its acceptance criteria. They do not validate administrative and reporting requirements, which require a separate discussion with a club administrator or manager. The project shall preserve this distinction between evidence and assumptions in subsequent requirements, diagrams, and UX materials.
 
+## Evidence provenance and verification boundary
+
+The discussion summaries and consent statements above were supplied by the document owner. The documentation consistency review did not contact participants or independently verify the original exchanges. It verifies coverage and traceability, not interview authenticity. The owner should retain the original responses and consent evidence securely and provide anonymised extracts to the supervisor if requested; do not publish names, contact details or private conversations in this repository.
+
+Confirmed findings in this document mean findings reported within this small visitor sample, not statistically established claims about all clubs. Administrator research and prototype evaluation remain outstanding.
+
 ## Team Review
 
 - [x] Mansur Urynbassar recorded the anonymised discussions and prepared the initial synthesis.
 - [ ] Aibekyly Alibi checked findings related to availability and reservations.
 - [ ] Akhmetov Nurali checked findings related to administration and reporting.
 - [x] Validated findings are explicitly separated from assumptions.
-- [ ] The final document was added to GitHub through an ECR-3 branch and Pull Request.
-- [ ] Links to the document, commit, and Pull Request were added to ECR-3.
+
+## Publication and review status
+
+The initial deliverable was merged through [PR #4](https://github.com/NeryBR/cyberseat-booking-system/pull/4). Its feature branch was deleted. Use the current repository files or immutable commit links, not deleted-branch URLs. PR #4 has no submitted GitHub reviews. The correction revision requires a recorded review by another team member before it is treated as an independently reviewed submission. Automated/documentation checks do not replace that review.
