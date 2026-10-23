@@ -69,7 +69,7 @@ All three systems confirm the market need for advance gaming-station booking. Ea
 CyberSeat is not intended to reproduce every venue-management function of mature commercial platforms. Its academic and practical focus is a transparent reservation workflow for local esports centres, with the following design priorities derived from the user discussions and comparison:
 
 1. show station specifications, prices, location, and real-time availability before confirmation;
-2. support individual and group selection, including visibly adjacent stations;
+2. support individual station selection with visible adjacency information; multi-station transactions remain a separate scope decision;
 3. revalidate availability immediately before confirmation and explain conflicts;
 4. allow visitors to view and cancel their own reservations with explicit rules;
 5. expose loading, empty, validation, server-error, and connection-loss states;
@@ -83,7 +83,7 @@ The project therefore has a distinct evaluation target: whether a focused, clear
 
 1. SENET, *Gaming Centers — Venue Management Software*. https://senet.cloud/gaming-centers
 2. ENESTECH Software, *SENET Changelog* (booking timeline, booking cancellation, statuses, SENET ID, group booking, admin booking and reports). https://enestech.zendesk.com/hc/en-gb/articles/26052144991516-Changelog-Last-updated-Oct-14-2026
-3. SENET, *Mobile App*. https://senet.cloud/mobile-app
+3. SENET, *Mobile App* (supplementary link, unavailable during the correction check; mobile claims above rely on source 2). https://senet.cloud/mobile-app
 4. ggCircuit, *ggLeap — Esports Venue Management Software*. https://www.ggcircuit.com/ggleap
 5. ggCircuit Knowledge Base, *ggLeap Booking System*. https://helpdesk.ggcircuit.com/en/article/ggleap-booking-system-18m36ss/
 6. ggCircuit, *Introducing the New Esports Booking System*. https://blog.ggcircuit.com/2023/05/02/ggcircuit-introduces-its-new-esports-booking-system/
