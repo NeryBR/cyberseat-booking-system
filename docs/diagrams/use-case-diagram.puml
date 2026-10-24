@@ -1,5 +1,6 @@
 @startuml
 title CyberSeat — Use Case Diagram
+!pragma layout smetana
 left to right direction
 skinparam packageStyle rectangle
 skinparam shadowing false
@@ -24,7 +25,6 @@ rectangle "CyberSeat" {
   usecase "View own reservations" as UC_Own
   usecase "Cancel own reservation" as UC_Cancel
 
-  usecase "Manage assigned club" as UC_Club
   usecase "Manage stations" as UC_Stations
   usecase "Manage working schedule" as UC_Schedule
   usecase "Manage unavailable intervals" as UC_Unavailable
@@ -54,18 +54,17 @@ UC_Create .> UC_Select : <<include>>
 UC_Create .> UC_Revalidate : <<include>>
 UC_Conflict .> UC_Create : <<extend>>\n[station no longer available]
 
-ClubAdmin --> UC_Club
-UC_Club .> UC_Stations : <<include>>
-UC_Club .> UC_Schedule : <<include>>
-UC_Club .> UC_Unavailable : <<include>>
-UC_Club .> UC_Reservations : <<include>>
-UC_Club .> UC_ManageEvents : <<include>>
-UC_Club .> UC_Reports : <<include>>
+ClubAdmin --> UC_Stations
+ClubAdmin --> UC_Schedule
+ClubAdmin --> UC_Unavailable
+ClubAdmin --> UC_Reservations
+ClubAdmin --> UC_ManageEvents
+ClubAdmin --> UC_Reports
 
 SystemAdmin --> UC_Clubs
 SystemAdmin --> UC_Assign
 
-note bottom of UC_Club
+note bottom of ClubAdmin
   Restricted to clubs assigned
   to the administrator.
 end note
