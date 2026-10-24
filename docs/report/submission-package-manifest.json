@@ -2,8 +2,8 @@
   "source_commit": "0ac6fb0f1b662896910127040ba6a3e0876ddb45",
   "pdf": "Team_3_Approbation_Report_24_October.pdf",
   "pages": 122,
-  "bytes": 3017598,
-  "sha256": "90a21ccc617f828476907d384d6d92ebf268649780a53fa3fb1cff31a37e0837",
+  "bytes": 3008083,
+  "sha256": "d0a360b9040064de4ddf4aa7c2d97e4fea61d806d069aac3d73a5b1fdcb55ed3",
   "source_manifest": [
     {
       "path": "docs/report/project-proposal.md",
@@ -12,8 +12,8 @@
     },
     {
       "path": "docs/research/user-needs-evidence.md",
-      "sha256": "a6246880ec35943efb716f9e70b89d960fae3fe2205b1c38fbae6d83e6157654",
-      "baseline": "0ac6fb0f1b662896910127040ba6a3e0876ddb45"
+      "sha256": "01cfe0cbc031f8508eec67fcd63447c824eb23f3cdb7c939d1248488f1e7b726",
+      "baseline": "editorial revision 2, October 24 2026"
     },
     {
       "path": "docs/research/literature-review.md",
@@ -22,8 +22,8 @@
     },
     {
       "path": "docs/research/existing-systems-comparison.md",
-      "sha256": "ff1c472d15cdd004e1bebe5321a2b8281feb215613560fc6a7f4bdba88673d84",
-      "baseline": "0ac6fb0f1b662896910127040ba6a3e0876ddb45"
+      "sha256": "62b75022f60e390fd7b07b75e5eed108502bd72883116c9fb3c7be9a430cbcba",
+      "baseline": "editorial revision 2, October 24 2026"
     },
     {
       "path": "docs/research/technology-comparison.md",
@@ -112,12 +112,13 @@
       "Aibekuly Alibi",
       "Mansur Urynbassar"
     ],
-    "coverage": "Full preceding PDF plus separately checked revised section 11, checklist, and updated records of the 122-page rebuild",
+    "coverage": "Historical review of the preceding PDF only; current editorial changes requested by Mansur, technically checked by Codex.",
     "outcome": "Both reviewed updates; no issues reported",
     "pdf_sha256": "90a21ccc617f828476907d384d6d92ebf268649780a53fa3fb1cff31a37e0837",
     "formal_github_approval": "Prior PR 13 approval is recorded for its own revision; no new submitted approval is claimed"
   },
   "supervisor_evidence": "Received: Myrzakerimova Alua, WhatsApp, October 24, 2026, displayed reply 17:55; no comments; original retained separately",
-  "technical_checks": "Reopened and text-extracted all 122 pages; exact supervisor quote matched; rendered all pages; inspected eight contact sheets; zero out-of-bounds text characters. Original conversation screenshot is not embedded.",
-  "review_chronology": "Pending-review wording inside the PDF is compilation-time status. This external dated record supersedes it following Nurali confirmation; PDF bytes were unchanged after that confirmation."
+  "technical_checks": "Editorial revision: 122 pages reopened; obsolete phrases absent; pages 10, 11, 12 and 23 rendered and visually inspected. Other pages preserved. Earlier full-document verification belongs to the prior hash.",
+  "review_chronology": "Mansur requested these three editorial corrections. No new supervisor response or independent teammate approval of revised PDF is claimed.",
+  "editorial_revision": "Reconstructed affected text blocks in the existing PDF; original generator was not included in repository. Other pages and numbering preserved. Sources updated consistently."
 }

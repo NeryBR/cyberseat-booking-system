@@ -99,16 +99,16 @@ The sample is exploratory and is not statistically representative. It provides i
 
 | ID | Finding | Evidence | Project implication | Status |
 |---|---|---|---|---|
-| F1 | Visitors currently depend on messaging, calls, social media, or in-person requests to check availability and reserve stations. | R1, R2, R3 | Provide self-service availability search and reservation. | Validated across all three discussions |
-| F2 | Visitors cannot reliably inspect current station availability without contacting club staff. | R1, R3; indirectly supported by R2 | Display current availability and revalidate it on the server before confirmation. | Validated |
-| F3 | Groups need enough available stations and prefer adjacent seating. | R1, R2 | Represent station location or adjacency and support group-oriented selection in later design work. | Validated by two discussions |
-| F4 | Equipment specifications influence station choice. | R1, R2, R3 | Display CPU, GPU, monitor refresh rate, peripherals, and other relevant station attributes. | Validated across all three discussions |
-| F5 | Price and exact available intervals are required before confirmation. | R1, R2, R3 | Show transparent hourly prices, time zone, and available intervals before confirmation. | Validated across all three discussions |
-| F6 | When availability changes, visitors expect prompt notification and an alternative station or time. | R1, R2, R3 | Provide a clear conflict state and offer comparable stations or another interval. | Validated across all three discussions |
-| F7 | Visitors expect self-service cancellation with clear rules. | R1, R2, R3 | Provide cancellation in the personal account and display applicable rules and deadlines. | Validated across all three discussions |
-| F8 | A local tournament and event calendar is considered useful. | R1, R2, R3 | Retain the event calendar in the planned scope. Treat event registration as a separate scope decision. | Validated across all three discussions |
-| F9 | Key reservation functions must be convenient on mobile devices. | R1, R2, R3 | Use responsive layouts for availability, specifications, prices, confirmation, status, history, and cancellation. | Validated across all three discussions |
-| F10 | Trust depends on accurate availability, specifications and prices, reliable confirmation, and timely notifications. | R1, R2, R3 | Prioritise data consistency, explicit confirmation, transparent information, and visible error handling. | Validated across all three discussions |
+| F1 | Visitors currently depend on messaging, calls, social media, or in-person requests to check availability and reserve stations. | R1, R2, R3 | Provide self-service availability search and reservation. | Supported by all three participant discussions |
+| F2 | Visitors cannot reliably inspect current station availability without contacting club staff. | R1, R3; indirectly supported by R2 | Display current availability and revalidate it on the server before confirmation. | Supported directly by R1 and R3, and indirectly by R2 |
+| F3 | Groups need enough available stations and prefer adjacent seating. | R1, R2 | Represent station location or adjacency and support group-oriented selection in later design work. | Supported by two participant discussions |
+| F4 | Equipment specifications influence station choice. | R1, R2, R3 | Display CPU, GPU, monitor refresh rate, peripherals, and other relevant station attributes. | Supported by all three participant discussions |
+| F5 | Price and exact available intervals are required before confirmation. | R1, R2, R3 | Show transparent hourly prices, time zone, and available intervals before confirmation. | Supported by all three participant discussions |
+| F6 | When availability changes, visitors expect prompt notification and an alternative station or time. | R1, R2, R3 | Provide a clear conflict state and offer comparable stations or another interval. | Supported by all three participant discussions |
+| F7 | Visitors expect self-service cancellation with clear rules. | R1, R2, R3 | Provide cancellation in the personal account and display applicable rules and deadlines. | Supported by all three participant discussions |
+| F8 | A local tournament and event calendar is considered useful. | R1, R2, R3 | Retain the event calendar in the planned scope. Treat event registration as a separate scope decision. | Supported by all three participant discussions |
+| F9 | Key reservation functions must be convenient on mobile devices. | R1, R2, R3 | Use responsive layouts for availability, specifications, prices, confirmation, status, history, and cancellation. | Supported by all three participant discussions |
+| F10 | Trust depends on accurate availability, specifications and prices, reliable confirmation, and timely notifications. | R1, R2, R3 | Prioritise data consistency, explicit confirmation, transparent information, and visible error handling. | Supported by all three participant discussions |
 
 ## Requirements Informed by Evidence
 

@@ -1,3 +1,13 @@
+# Editorial revision verification — 24 October 2026
+
+Current PDF: 122 pages, 3,008,083 bytes. SHA-256: `d0a360b9040064de4ddf4aa7c2d97e4fea61d806d069aac3d73a5b1fdcb55ed3`.
+
+Mansur requested three limited editorial corrections: separate competitor availability from proof of market demand; remove unscored strongest/clearest claims; describe interview findings as supported by the named participants. Sources existing-systems-comparison.md and user-needs-evidence.md were updated. PDF pages 10, 11, 12 and 23 were reconstructed and visually checked; all 122 pages reopen and obsolete phrases are absent. The original PDF generator was not present, so affected text blocks were replaced while preserving other pages, page numbering, links and diagrams. No new human or supervisor approval of this revision is claimed.
+
+The earlier review history below applies only to its explicitly stated older hash. It does not establish approval of the new bytes.
+
+## Historical verification of preceding revision
+
 # Consolidated Report Verification - ECR-24
 
 Updated October 24, 2026. Coordinator: Akhmetov Nurali.
