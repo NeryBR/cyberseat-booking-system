@@ -2,7 +2,7 @@
 
 Version 1.0 · October 24, 2026 · Register coordinator: Akhmetov Nurali · University item 10
 
-Status: initial proposed assessment; teammate review pending. Risk scores and residual targets are planning judgments, not measured probabilities or evidence that treatment has been implemented. Read with the [project management plan](project-management-plan.md), its G0–G6 release gates, D1–D4 development stages and DEP-01–08 dependencies.
+Status: initial proposed assessment approved by Mansur in PR #10; subsequent team agreement reported by Mansur. See the [October 24 review and agreement record](../project/team-review-2026-10-24.md). Risk scores and residual targets are planning judgments, not measured probabilities or evidence that treatment has been implemented. Read with the [project management plan](project-management-plan.md), its G0–G6 release gates, D1–D4 development stages and DEP-01–08 dependencies.
 
 ## 1. Assessment method and ownership
 
@@ -50,9 +50,9 @@ The current known access limitation is that the live YouTrack board asked for si
 
 ## 5. Review record
 
-Prepared by Akhmetov Nurali with assistance in drafting, based on the supplied task and repository material. Proposed reviewers: Alibi for booking/data risks and Mansur for respondent/API/UX feasibility; all three agree submission ownership and timing. Actual review has not been claimed.
+Prepared by Akhmetov Nurali with assistance in drafting, based on the supplied task and repository material. Proposed reviewers: Alibi for booking/data risks and Mansur for respondent/API/UX feasibility; all three agree submission ownership and timing. Mansur's actual GitHub approval is recorded in PR #10; additional agreement was reported by him on behalf of the team. See the [October 24 review and agreement record](../project/team-review-2026-10-24.md).
 
-- [ ] Record the actual reviewer(s), reviewed commit, date and decision source.
+- [x] Record the actual reviewer, reviewed commit, date and decision source: [NeryBR's approval of PR #10](https://github.com/NeryBR/cyberseat-booking-system/pull/10#pullrequestreview-5637783155) (commit `84602e21fe42c5f31bf91b70fdd96aa992271288`), submitted October 24, 2026.
 - [ ] Confirm treatment owners and the proposed internal checkpoints, including submission backup.
 - [ ] Resolve blocking comments; update the management plan and this register together if decisions change.
 - [ ] Add result/commit/PR/review evidence to the verified management task before marking it Done.

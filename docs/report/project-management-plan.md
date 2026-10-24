@@ -2,7 +2,7 @@
 
 Version 1.0 · October 24, 2026 · Coordinator: Akhmetov Nurali · University item 10: Project management and risks
 
-Status: proposed plan, ready for teammate review. This document records responsibilities, delivery gates and dependencies; it does not establish that a milestone, review, submission or application test has been completed. Read with the [risk register](risk-register.md).
+Status: proposed plan approved by Mansur in PR #10, with subsequent team agreement reported by Mansur. See the [October 24 review and agreement record](../project/team-review-2026-10-24.md). This document records responsibilities, delivery gates and dependencies; it does not establish that a milestone, review, submission or application test has been completed. Read with the [risk register](risk-register.md).
 
 ## 1. Sources and deadline boundary
 
@@ -105,10 +105,10 @@ Done means the stated acceptance evidence exists, blocking review comments are r
 | Milestones and dependencies | G0–G6, D1–D4 and DEP-01–08 |
 | Required five risks with owners and mitigation | R-01–05 in risk-register.md; additional R-06–08 protect access/report/evidence consistency |
 | Development after first submission separated | Section 3 and separate D-stage gates |
-| Result, commit/PR and reviewer | Attach both files and the final reviewed PR/commit to the actual management task; reviewer confirmation pending |
+| Result, commit/PR and reviewer | Attach both files and the final reviewed PR/commit to the actual management task; PR #10 reviewer approval recorded |
 
 - [ ] Verify and attach the exact YouTrack task identifier; live board status was unavailable during preparation.
-- [ ] A named teammate reviews the plan/risk register against the recorded commit; resolve blocking comments.
+- [x] A named teammate approved the plan/risk register against the recorded commit: [NeryBR's approval of PR #10](https://github.com/NeryBR/cyberseat-booking-system/pull/10#pullrequestreview-5637783155) (commit `84602e21fe42c5f31bf91b70fdd96aa992271288`). Outstanding release decisions and any new blocking comments remain separate.
 - [ ] Confirm the university time zone/channel and name the submitter/backup in the release record.
 - [ ] Attach file links, commit/PR and real review evidence to the task.
 - [ ] Mark the task Done only after its acceptance criteria are met; do not claim the full project has been submitted merely because this task is closed.
