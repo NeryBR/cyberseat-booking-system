@@ -1,9 +1,9 @@
 # October Submission Package Audit - ECR-18
 
-Audit date: October 24, 2026. Coordinator: Akhmetov Nurali. Audited repository baseline: `23047b9566a376f6c463b5111831946cd12bf429`.
+Audit date: October 24, 2026. Coordinator: Akhmetov Nurali. Audited source baseline: `0ac6fb0f1b662896910127040ba6a3e0876ddb45` (PR 13 merged). Updated with the supervisor response supplied on October 24.
 
 ## Method and boundary
-All eleven components listed in ECR-18 were inspected against the current repository. Related live October YouTrack descriptions, assignees, priorities, and stages were inspected. This is a document and package audit assisted by Codex, not three independent human reviews, supervisor approval, an application test report, or a submission receipt. Existing GitHub reviews of source deliverables do not approve the new consolidated PDF.
+All eleven components listed in ECR-18 were inspected against the current repository. Related live October YouTrack descriptions, assignees, priorities, and stages were inspected. This is a document and package audit assisted by Codex. The supervisor response is now recorded separately as primary evidence. Earlier PDF reviews and the submitted GitHub approval of PR 13 apply to their identified revision; they do not certify the rebuilt PDF. No application test results or submission receipt are claimed. Nurali coordinates the audit; he relayed the participation of Alibi and Mansur through their earlier full-document reviews and their joint request to incorporate the feedback.
 
 The original university requirements document was not provided to this work. The eleven-component structure follows the live ECR-18 acceptance criteria. The existing closure record reports an earlier inspection of the university document and distinguishes it from the separately reported deadline and submission arrangements.
 
@@ -20,24 +20,24 @@ The original university requirements document was not provided to this work. The
 | 8 | UX prototype | [README.md](../ux/README.md) | Present: interactive v2 local simulation and preserved v1.1 static screens. The report labels the historical screens correctly; real API integration, user studies, and v2 real-browser validation are not certified. |
 | 9 | Verification and evaluation plan | [verification-and-evaluation-plan.md](../testing/verification-and-evaluation-plan.md) | Present: owners, cases, fixtures, metrics, thresholds, comparison baselines, traceability, execution gates, and limitations. Future tests remain unexecuted. |
 | 10 | Project management and risks | [project-management-plan.md](../report/project-management-plan.md) | Present: three participants, October gates, later development stages, dependencies, and an owned risk register. Planned checkpoints are not treated as executed. |
-| 11 | Supervisor feedback | [supervisor-feedback-record.md](../report/supervisor-feedback-record.md) | Incomplete: supervisor identity is documented, but a dated request, genuine response or properly evidenced unanswered request, and escalation are not verified. The prepared request is explicitly not sent. |
+| 11 | Supervisor feedback | [supervisor-feedback-record.md](../report/supervisor-feedback-record.md) | Present: Myrzakerimova Alua replied through WhatsApp on October 24, 2026 at 17:55, reporting no shortcomings or comments. The original wording, English translation, provenance, and evidence checksum are recorded. No substantive correction was requested. |
 
 
 ## Repository and release controls
 | Control | Observation | Disposition |
 |---|---|---|
-| Repository | Public repository cloned successfully at 23047b9566a376f6c463b5111831946cd12bf429 | Verified technical availability; actual committee/supervisor account access is not certified |
+| Repository | Public repository cloned successfully at 23047b9566a376f6c463b5111831946cd12bf429 | Verified technical availability; the supervisor reports checking GitHub; committee account access remains a separate ECR-17 verification |
 | Individual contributions | Git history contains substantive source changes under Akhmetov Nurali, Alibi-stack, and NeryBR | Authorship metadata inspected; identity and account ownership are not independently authenticated |
-| Pull Request evidence | Source approvals are recorded in the October 24 team-review record; PRs 5, 6, and 10 were directly inspected in this chat | Distinguish actual submitted reviews from comments and reported agreement |
+| Pull Request evidence | Source approvals are recorded in the team-review record. PR 13 has NeryBR approval #5638090721 and merge 0ac6fb0f1b662896910127040ba6a3e0876ddb45; the subsequent feedback update has its own revision | Distinguish actual submitted reviews from comments and reported agreement |
 | Review timing | The source review record notes some approvals after merge | Do not claim universal compliance with review-before-merge requirements |
 | Final submission version | No pre-defense-1 tag was present in the cloned baseline | ECR-17 remains a separate unresolved release gate; no tag created or moved |
 | Priorities and deadlines | Live October descriptions retain the before-18:00 cutoff; internal targets are explicitly separate | Stage, owner, and priority observations recorded below; not all issue field dates are exposed in the inspected UI |
 | Deadline/channel | Existing closure record reports Mansur's confirmation of October 24 before 18:00 Astana time, UTC+5, and the Microsoft form | Reported source, not newly confirmed by the university in this work |
-| Consolidated PDF | Team_3_Approbation_Report_24_October.pdf compiled from this baseline, with new audit and feedback-status records | Technical PDF verification is recorded separately; two full-PDF reviews with no issues were subsequently reported by Nurali; see the consolidated report verification record |
+| Consolidated PDF | Team_3_Approbation_Report_24_October.pdf compiled from this baseline, with new audit and feedback-status records | The report is rebuilt with the actual feedback. The previous PDF was reviewed by Alibi and Mansur; review of the changed sections in the rebuilt file is recorded separately and must not be inferred |
 | YouTrack screenshot PDF | ECR-19 is Queue in the inspected live card; no final screenshot PDF was found in this repository | Separate required artifact remains unverified; this consolidated report does not substitute for it |
 | Submission receipt | ECR-20 is Queue; no receipt supplied | No submission performed or claimed |
-| Supervisor feedback | No dated request/response or escalation evidence supplied | ECR-16 remains Queue |
-| Three-person package verification | No evidence that all three have reviewed this exact package | Pending; AI checks do not count as team-member reviews |
+| Supervisor feedback | Actual response and no-comments decision are transcribed in the feedback record; date and channel confirmed by Nurali | Feedback evidence present; no escalation is needed for an answered request |
+| Team participation | Nurali coordinates; he reported Alibi and Mansur's full review of the preceding PDF and relayed their joint instruction to incorporate the supervisor reply | Historical reviews remain revision-specific; rebuilt-PDF review is separate |
 
 ## Live task observations
 The following observations are a point-in-time snapshot from October 24. Titles are reproduced in English for this audit. The underlying ECR-19 and ECR-20 cards are outside this editing scope.
@@ -66,13 +66,14 @@ The following observations are a point-in-time snapshot from October 24. Titles 
 | [ECR-24](https://nerybr.youtrack.cloud/issue/ECR-24) | Akhmetov Nurali | Critical | Queue |
 
 
-## Release decision and remaining actions
-All eleven components have been inspected; item 11 is incomplete and several release controls remain unverified. ECR-18 remains Queue because complete-team package verification and dependent release evidence have not been established. Do not convert this audit into a declaration that the package is ready for submission.
+## Audit conclusion and separate release controls
+All eleven required components have been checked and linked. The previously missing supervisor response is now documented. The checklist explicitly identifies the remaining limitations; completion of this audit is not a declaration that every release task is complete.
 
-1. Supply the actual supervisor request/response or unanswered-request and escalation evidence.
-2. Two full-PDF reviews with no issues were subsequently reported by Nurali for Alibi and Mansur against the unchanged PDF checksum; see consolidated-report-verification.md. Verification of the entire package by all three remains pending.
-3. Complete ECR-17 access and exact-version checks; preserve any established submission tag.
-4. Complete the separate ECR-19 screenshot PDF and confirm form limits.
-5. Submit through the authorised channel and retain the actual receipt in ECR-20.
+ECR-18 can be completed as the eleven-component verification task once this updated checklist is published and its evidence is attached. Open controls remain visible rather than being described as complete:
 
-The historical Alibi-only PDF is a dated five-deliverable dossier. It is not the complete-team consolidated report. Future implementation in ECR-12 and ECR-21-ECR-23 is not an October completion prerequisite.
+1. ECR-24: verify the rebuilt PDF and obtain revision-specific confirmation of its changed feedback and checklist sections; retain the earlier full-PDF review history.
+2. ECR-17: complete committee access and exact-version/tag checks; preserve any established submission tag.
+3. ECR-19: complete the separate YouTrack screenshot PDF and confirm form limits.
+4. ECR-20: submit through the authorised channel and retain the actual receipt.
+
+The historical Alibi-only PDF remains a dated five-deliverable dossier. Future implementation in ECR-12 and ECR-21-ECR-23 is not an October completion prerequisite. The live-task table above is the earlier point-in-time snapshot, not a claim that those statuses are unchanged after this update.

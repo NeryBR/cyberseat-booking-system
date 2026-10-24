@@ -1,37 +1,31 @@
 # Consolidated Report Verification - ECR-24
 
-Report date: October 24, 2026. Coordinator: Akhmetov Nurali.
+Updated October 24, 2026. Coordinator: Akhmetov Nurali.
 
-## Artifact and source
-
+## Revised artifact
 - Report: [Team_3_Approbation_Report_24_October.pdf](Team_3_Approbation_Report_24_October.pdf).
-- Audited source baseline: `23047b9566a376f6c463b5111831946cd12bf429`.
-- Source inventory and file checksums: [submission-package-manifest.json](submission-package-manifest.json).
-- Package audit: [october-submission-checklist.md](october-submission-checklist.md).
-- Feedback status: [supervisor-feedback-record.md](supervisor-feedback-record.md).
+- Source baseline: `0ac6fb0f1b662896910127040ba6a3e0876ddb45` plus the documented supervisor-feedback updates.
+- PDF: 122 pages; 3017598 bytes.
+- SHA-256: `90a21ccc617f828476907d384d6d92ebf268649780a53fa3fb1cff31a37e0837`.
+- [Source manifest](submission-package-manifest.json), [package audit](october-submission-checklist.md), and [supervisor response](supervisor-feedback-record.md).
 
-This is a complete compilation of the available analysis-and-design material, labelled as a review copy. The feedback chapter explicitly records unavailable evidence. Compiling a chapter about missing evidence does not satisfy a requirement for genuine supervisor feedback.
+## Changes and technical verification
+The revised PDF adds the supervisor's verbatim reply, an English translation, identity, date, channel, provenance, and decision, without embedding the original screenshot. Current missing-feedback statements were corrected in the checklist, management reference, and review chronology. Earlier dated records remain identifiable as historical observations.
 
-## Technical checks performed
+The PDF was reopened with pypdf; text extraction succeeded on all 122 pages. The exact original-language supervisor quotation was matched against the extracted text. All pages were rendered with Poppler and inspected on eight contact sheets, including section 11 and the audit. A pdfplumber coordinate check found zero text characters outside the expected bounds. The three vector diagrams and twelve historical v1.1 UX plates remain present. No application tests or implementation results are claimed.
 
-The PDF was generated with ReportLab and reopened with pypdf. It contains 121 pages and is approximately 3.02 MB. Text extraction succeeded across all pages. Required section headings were checked, including the proposal, research, requirements, all three diagrams, UX prototype, verification plan, project management, risks, and feedback status.
+## Revision-specific team review
+The preceding 121-page PDF, SHA-256 `8498ccedb377999dc19c53ba91641f045663edc976c37b593bbe2c3f794fdcac`, was fully reviewed by Alibi and Mansur according to Nurali's earlier confirmation. On October 24, after the rebuilt 122-page PDF was opened in this chat, Nurali separately confirmed that both had checked its revised section 11, checklist, and updated records and found no issues. The PDF bytes have not changed since that confirmation.
 
-All 121 pages were rendered with Poppler. Eight contact sheets covering every rendered page were inspected for layout and section continuity. The report contains twelve labelled historical UX screen plates and three vector diagrams. A pdfplumber coordinate check found zero text characters outside the page's expected content/header/footer bounds. The report's prose uses the current repository URL and Pull Request terminology. These are document checks assisted by Codex; they are not application tests or independent team-member reviews.
-
-Clickable contents, section bookmarks, page numbers, pinned source links, and a source manifest are included. The embedded UX screens are the preserved v1.1 export; they are not presented as screenshots of the redesigned v2 interface. The v2 local prototype remains linked from the source documentation.
-
-## Human review of this exact PDF
-
-On October 24, 2026, Nurali reported in the working chat that Aibekuly Alibi and Mansur Urynbassar had both reviewed the entire new 121-page PDF and found no issues. This is an attributed user-reported review record; neither reviewer submitted a separate statement or GitHub approval in this work. Earlier source Pull Request approvals are not used as evidence for this PDF review. The PDF has not changed since that confirmation. Its SHA-256 is `8498ccedb377999dc19c53ba91641f045663edc976c37b593bbe2c3f794fdcac`.
-
-| Participant | Review date | Exact PDF SHA-256 | Full review outcome |
+| Participant | Previous full-document review | Revised-section outcome | Source |
 |---|---|---|---|
-| Aibekuly Alibi | October 24, 2026, reported by Nurali | 8498ccedb377999dc19c53ba91641f045663edc976c37b593bbe2c3f794fdcac | Entire 121-page PDF reviewed; no issues reported |
-| Akhmetov Nurali | Not recorded | Not recorded | Pending |
-| Mansur Urynbassar | October 24, 2026, reported by Nurali | 8498ccedb377999dc19c53ba91641f045663edc976c37b593bbe2c3f794fdcac | Entire 121-page PDF reviewed; no issues reported |
+| Aibekuly Alibi | Entire preceding 121-page PDF, no issues reported | New feedback and checklist updates checked; no issues reported | Nurali's explicit confirmation on October 24, 2026 |
+| Mansur Urynbassar | Entire preceding 121-page PDF, no issues reported | New feedback and checklist updates checked; no issues reported | Nurali's explicit confirmation on October 24, 2026 |
 
-Two full-PDF reviews with no issues have now been reported by Nurali. No individual check beyond full-document review and that outcome is attributed to either reviewer. Any change to the PDF invalidates this checksum-specific record and requires review of the revised file. The statements inside the PDF that review was pending describe its compilation-time state; this subsequent dated record updates that state without altering the reviewed PDF.
+The confirmation is attributed user-reported evidence, not independent statements retrieved from their accounts. The pending revised-review text inside the PDF describes its compilation-time state; this subsequent record supersedes it for the unchanged checksum above. The earlier full review plus the separately confirmed review of the changed sections provides the recorded review coverage of this rebuild.
 
-## Closure gate
+## GitHub approval boundary
+PR 13 has an actual [submitted NeryBR approval](https://github.com/NeryBR/cyberseat-booking-system/pull/13#pullrequestreview-5638090721) against `f473efa9b683970bfbe81a868b62ce3ea36c1bb6` and merge `0ac6fb0f1b662896910127040ba6a3e0876ddb45`. That approval concerns the preceding revision. The user-reported checks of this updated PDF are not represented as a new submitted GitHub approval.
 
-The technical checks and two user-reported full-document reviews are recorded. ECR-24 remains Queue because the supervisor-feedback evidence required by the report is still unavailable; compilation of an evidence-gap chapter is not supervisor feedback. This record does not establish submission, receipt, supervisor approval, final application implementation, or executed final tests.
+## Acceptance disposition
+The consolidated PDF exists and reopens successfully; every required section is present, including genuine supervisor feedback. Readability and structure were technically checked, and the revision-specific team-review history is recorded above. ECR-24 can be completed after attaching this artifact and record. This does not complete committee access, the final tag, the separate YouTrack screenshot PDF, submission, or receipt, which remain their own tasks.
