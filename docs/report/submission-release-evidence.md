@@ -4,7 +4,7 @@ Prepared on 24 October 2026 for ECR-17, ECR-19 and ECR-20. Deadline: before 18:0
 
 ## Files and form requirements
 
-- `Team_3_Approbation_Report_24_October.pdf`: 122 pages, 3,017,598 bytes; SHA-256 `90a21ccc617f828476907d384d6d92ebf268649780a53fa3fb1cff31a37e0837`. Submit the identical file renamed `SE-2404_Urynbassar_ProbPeriod1.pdf` for form question 9.
+- `Team_3_Approbation_Report_24_October.pdf`: 122 pages, 3,008,083 bytes; SHA-256 `d0a360b9040064de4ddf4aa7c2d97e4fea61d806d069aac3d73a5b1fdcb55ed3`. Submit the identical file renamed `SE-2404_Urynbassar_ProbPeriod1.pdf` for form question 9.
 - `Team_3_YouTrack_24_October.pdf`: 44 pages, 7,696,491 bytes; SHA-256 `8adcb02399ffe41bd3697c64ffba248f353e31fe26ef44deff60a309172c3368`. Submit for question 8. Includes the board, all 24 tasks and detailed completed-task examples with criteria, result links and reviews.
 - The supplied form screenshots require tag `prob-period-1`. Create it on the final merged package commit. Retain `pre-defense-1`, required by the earlier task wording, as an alias on exactly the same commit. Never move an existing submission tag.
 - The form screenshots do not disclose upload size limits. Both files are below 10 MB; successful acceptance by the form must still be checked by the representative.
@@ -30,3 +30,7 @@ The evidence PDF captures 17 Done, 2 in-progress and 5 queued tasks at 17:29 UTC
 This is an analysis/design/planning submission. The application scaffold is not an implemented application. Implementation, integration, migrations, deployment and executed final application tests remain future work (ECR-12, ECR-21, ECR-22, ECR-23). Research limitations remain disclosed in the report. The supervisor reply is recorded with attribution; no signature or independent formal approval is invented.
 
 ECR-20 must remain open until Mansur submits the form and preserves a genuine receipt. Preparation of these files does not mean the form has been submitted.
+
+## Editorial correction before submission
+
+Mansur requested the three content clarifications recorded in consolidated-report-verification.md. The screenshot PDF remains the authentic earlier snapshot, including its historical report hash. The representative explicitly authorized updating prob-period-1 to the new corrected package before form submission. The former target b7fbc73935aac9a517de26cb0d07fea80b6b162f remains available in Git history; pre-defense-1 remains a historical tag for that earlier package. The form must use prob-period-1 after the updated tag and PDF hash have been verified. No submission receipt is claimed.
