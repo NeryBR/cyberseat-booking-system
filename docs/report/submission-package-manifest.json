@@ -1,0 +1,112 @@
+{
+  "source_commit": "23047b9566a376f6c463b5111831946cd12bf429",
+  "pdf": "Team_3_Approbation_Report_24_October.pdf",
+  "pages": 121,
+  "bytes": 3020935,
+  "sha256": "8498ccedb377999dc19c53ba91641f045663edc976c37b593bbe2c3f794fdcac",
+  "source_manifest": [
+    {
+      "path": "docs/report/project-proposal.md",
+      "sha256": "f9d73e543d24b29775ee30f4d2f843b9fbbb31ffdbacd0040a2504d4457aa95d",
+      "baseline": "23047b9566a376f6c463b5111831946cd12bf429"
+    },
+    {
+      "path": "docs/research/user-needs-evidence.md",
+      "sha256": "a6246880ec35943efb716f9e70b89d960fae3fe2205b1c38fbae6d83e6157654",
+      "baseline": "23047b9566a376f6c463b5111831946cd12bf429"
+    },
+    {
+      "path": "docs/research/literature-review.md",
+      "sha256": "30f4346e848c4ad20f12bd69c3ccf11e4117e4fd61ec9b32ff3050eb02d339eb",
+      "baseline": "23047b9566a376f6c463b5111831946cd12bf429"
+    },
+    {
+      "path": "docs/research/existing-systems-comparison.md",
+      "sha256": "ff1c472d15cdd004e1bebe5321a2b8281feb215613560fc6a7f4bdba88673d84",
+      "baseline": "23047b9566a376f6c463b5111831946cd12bf429"
+    },
+    {
+      "path": "docs/research/technology-comparison.md",
+      "sha256": "b55a16f7ea6c2ba9cc727bb2d3af5150aa1b24d27842b5e4714c6b852e07cabc",
+      "baseline": "23047b9566a376f6c463b5111831946cd12bf429"
+    },
+    {
+      "path": "docs/requirements/user-scenarios.md",
+      "sha256": "35ad24f1bce334afb4d1e526d8e99f9bba454ed886f75bc04dc128a6b5d5cf85",
+      "baseline": "23047b9566a376f6c463b5111831946cd12bf429"
+    },
+    {
+      "path": "docs/requirements/booking-and-nfr.md",
+      "sha256": "6915e71ed08cd6524bb8ee1f6b2c7cc922568b84da3ce867a51b52d966b4b28b",
+      "baseline": "23047b9566a376f6c463b5111831946cd12bf429"
+    },
+    {
+      "path": "docs/requirements/roles-and-permissions.md",
+      "sha256": "fb6a5efabdabd8dc789dc4297503d2f5e86c6977793366c55c2de95a21ef234b",
+      "baseline": "23047b9566a376f6c463b5111831946cd12bf429"
+    },
+    {
+      "path": "docs/requirements/administrative-requirements.md",
+      "sha256": "af340331664a4c743a76ffc1d9341d48d836a5c0a2c9435a4817aa2cfce26a31",
+      "baseline": "23047b9566a376f6c463b5111831946cd12bf429"
+    },
+    {
+      "path": "docs/diagrams/architecture.md",
+      "sha256": "f4e64fd9a85fb6019c3d8bed153e3e0069bcc20b3f27f72aaaf6db25bb2f71a1",
+      "baseline": "23047b9566a376f6c463b5111831946cd12bf429"
+    },
+    {
+      "path": "docs/diagrams/README.md",
+      "sha256": "da1d671530a43cf8bc29e1a829d7d8c6ae3dbba180458772bef3602c0da1c4d2",
+      "baseline": "23047b9566a376f6c463b5111831946cd12bf429"
+    },
+    {
+      "path": "docs/ux/README.md",
+      "sha256": "047513014865e1861c0f17baa3db8562b2afa291fe8ca59a9026ed85fdc6c977",
+      "baseline": "23047b9566a376f6c463b5111831946cd12bf429"
+    },
+    {
+      "path": "docs/testing/verification-and-evaluation-plan.md",
+      "sha256": "5aea254a61e7ab4d53e66f5d897943d4ffe88c3017eca344800cce41c5dd365b",
+      "baseline": "23047b9566a376f6c463b5111831946cd12bf429"
+    },
+    {
+      "path": "docs/report/project-management-plan.md",
+      "sha256": "f7704817e5cbf512adccc382862bd7ca67b571f436fadd0a09a356c162661f92",
+      "baseline": "23047b9566a376f6c463b5111831946cd12bf429"
+    },
+    {
+      "path": "docs/report/risk-register.md",
+      "sha256": "32b9b7825805d25b2188755d473c1b29f65c34c2a50f20d17df523cbfea74ebc",
+      "baseline": "23047b9566a376f6c463b5111831946cd12bf429"
+    },
+    {
+      "path": "docs/report/supervisor-feedback-record.md",
+      "sha256": "4cd141b670846167f95efc210cfedf880a0d63e73364073826f84267a3e67cce",
+      "baseline": "new package record"
+    },
+    {
+      "path": "docs/report/october-submission-checklist.md",
+      "sha256": "df0d2c0b5bf0749f71e4f772873c424bbffd9c2b7b9fd8d6c70193afe14145a8",
+      "baseline": "new package record"
+    },
+    {
+      "path": "docs/project/team-review-2026-10-24.md",
+      "sha256": "9528ceed9e453b300b4e04a5954bed9e552dedfdc57f5c95bbd972d1e3b7a136",
+      "baseline": "23047b9566a376f6c463b5111831946cd12bf429"
+    },
+    {
+      "path": "docs/project/closure-evidence-2026-10-24.md",
+      "sha256": "3e226ee49cc5434addb349b0c718280ec5da573ce4ee3f3e6ab3d2837e68d129",
+      "baseline": "23047b9566a376f6c463b5111831946cd12bf429"
+    },
+    {
+      "path": "docs/project/repository-verification.md",
+      "sha256": "d5281e3f4a29801bc4fea45db48bf9d2ccb56f969a30215dd9186affd473869d",
+      "baseline": "23047b9566a376f6c463b5111831946cd12bf429"
+    }
+  ],
+  "human_review": "Pending: no reviews of this exact PDF recorded",
+  "supervisor_evidence": "Not supplied or verified",
+  "technical_checks": "PDF reopened; all pages extract text; required sections present; obsolete repository URL and terminology absent. Visual review recorded separately."
+}
