@@ -2,7 +2,7 @@
 
 Version 1.0 · October 23, 2026 · ECR-13 · Document coordinator: Akhmetov Nurali
 
-**Status: planned; no application tests or user studies have been executed under this plan.** Numerical examples are expected values, not observed results. Reviewer confirmation for this plan is pending; approval of earlier requirements is not approval of this new deliverable.
+**Status: planned; no application tests or user studies have been executed under this plan.** Numerical examples are expected values, not observed results. This plan has [NeryBR's approval of PR #6](https://github.com/NeryBR/cyberseat-booking-system/pull/6#pullrequestreview-5637446581) (commit `eee6c80b0134a252eb4a1f862df9701e30f378d7`); see the [October 24 review and agreement record](../project/team-review-2026-10-24.md). Approval concerns the plan, not execution of its tests.
 
 ## 1. Submission scope and objectives
 
@@ -241,8 +241,8 @@ Limitations to report: convenience sample and learning effects; simulated rather
 - [x] Metrics specify conditions, synthetic data, thresholds and explicit baselines.
 - [x] Requirement IDs map to planned checks, using requirements, architecture and UX inputs.
 - [x] Plan clearly distinguishes expected values and future execution from actual results.
-- [ ] Record the actual reviewing participant, plan commit and outcome; resolve blocking comments.
+- [x] Record the actual reviewing participant, plan commit and approval outcome: [NeryBR's approval of PR #6](https://github.com/NeryBR/cyberseat-booking-system/pull/6#pullrequestreview-5637446581) (commit `eee6c80b0134a252eb4a1f862df9701e30f378d7`). Any newly identified blocking issue still requires resolution.
 - [ ] Attach this file, commit and Pull Request links to ECR-13.
 - [ ] Confirm all task criteria and only then change the task to Done.
 
-Existing approval of ECR-8 is not approval of ECR-13. No final tests, measured improvement or new reviewer approval are asserted by this plan.
+PR #6 supplies approval of ECR-13 itself. No final tests or measured improvement are asserted by this plan.

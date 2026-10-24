@@ -2,7 +2,7 @@
 
 Version 1.0 · October 23, 2026 · Owner: Akhmetov Nurali · ECR-8
 
-Status: proposed specification, ready for team review. This is planned behaviour, not implemented authorisation or completed tests. Sources: [scenarios](user-scenarios.md), [booking baseline](booking-and-nfr.md), [administrative specification](administrative-requirements.md). System administrator in existing documents means superadministrator here.
+Status: design specification with GitHub approval and reported team agreement; see the [October 24 review and agreement record](../project/team-review-2026-10-24.md). This is planned behaviour, not implemented authorisation or completed tests. Sources: [scenarios](user-scenarios.md), [booking baseline](booking-and-nfr.md), [administrative specification](administrative-requirements.md). System administrator in existing documents means superadministrator here.
 
 ## Role definitions
 
@@ -59,8 +59,8 @@ An authenticated user lacking an administrative capability receives 403. For an 
 
 ## Review required before task closure
 
-- [ ] Aibekuly Alibi reviews assignment relationships and transaction/revocation guards against the shared model.
-- [ ] Mansur Urynbassar checks navigation and visible actions against this matrix.
-- [ ] A named teammate records the reviewed commit and outcome in the PR/task.
+- [x] Team agreement with the proposed assignment and transaction/revocation design is recorded from Mansur's October 24 confirmation on behalf of the team. See the [October 24 review and agreement record](../project/team-review-2026-10-24.md); no separate execution of a technical review by Alibi is asserted.
+- [x] Mansur's approval of the role/access specification is recorded in PR #5. See the [October 24 review and agreement record](../project/team-review-2026-10-24.md); this is design acceptance, not a live-interface test.
+- [x] Named reviewer, reviewed commit and approval outcome are recorded in [NeryBR's approval of PR #5](https://github.com/NeryBR/cyberseat-booking-system/pull/5#pullrequestreview-5637447311) (commit `834f87e1a78a5ebc1b5c29097b856427dd43f993`).
 
-These are pending reviews, not completed approvals. See the [full acceptance checklist](administrative-requirements.md#october-deliverable-acceptance).
+The approval and reported agreement above are recorded; external task-evidence actions remain separate. See the [full acceptance checklist](administrative-requirements.md#october-deliverable-acceptance).

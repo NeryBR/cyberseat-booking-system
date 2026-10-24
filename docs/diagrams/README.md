@@ -20,11 +20,11 @@ Access boundaries are stated explicitly: visitors access only their own reservat
 - [x] Editable source is included.
 - [x] Readable SVG export is included.
 - [x] Mansur checked alignment with the interface scenarios.
-- [ ] Another team member reviewed the diagram.
+- [x] Another team member reviewed the diagram. See the review record below.
 
 ## Publication and review status
 
-The initial deliverable was merged through [PR #4](https://github.com/NeryBR/cyberseat-booking-system/pull/4). Its feature branch was deleted. Use the current repository files or immutable commit links, not deleted-branch URLs. PR #4 has no submitted GitHub reviews. The correction revision requires a recorded review by another team member before it is treated as an independently reviewed submission. Automated/documentation checks do not replace that review.
+The initial version was published through PR #4. The applicable revision has a recorded review: [Alibi-stack's approval of PR #7](https://github.com/NeryBR/cyberseat-booking-system/pull/7#pullrequestreview-5637591235) (commit `d7bae8ea9931bbdb8e4caec01c243f33c8cea493`). See the [October 24 review and agreement record](../project/team-review-2026-10-24.md) for the distinction between GitHub approval, reported team agreement and outstanding execution checks.
 
 ## Reproduce the export
 

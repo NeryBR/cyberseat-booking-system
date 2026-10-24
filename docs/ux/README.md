@@ -44,11 +44,11 @@ Statuses use both text and colour. The booking path is consistent with the ECR-1
 - [x] Loading, empty, validation, server, and connection states included.
 - [x] Status is represented with text and colour.
 - [x] Prototype is aligned with the booking scenarios.
-- [ ] Prototype reviewed by another team member.
+- [x] Prototype reviewed by another team member. See the review record below.
 
 ## Publication and review status
 
-The initial deliverable was merged through [PR #4](https://github.com/NeryBR/cyberseat-booking-system/pull/4). Its feature branch was deleted. Use the current repository files or immutable commit links, not deleted-branch URLs. PR #4 has no submitted GitHub reviews. The correction revision requires a recorded review by another team member before it is treated as an independently reviewed submission. Automated/documentation checks do not replace that review.
+The initial version was published through PR #4. The applicable revision has a recorded review: [NeryBR's approval of PR #9](https://github.com/NeryBR/cyberseat-booking-system/pull/9#pullrequestreview-5637860487) (commit `723579d61ac025b50f59ff64cb0086cb03698a0d`). See the [October 24 review and agreement record](../project/team-review-2026-10-24.md) for the distinction between GitHub approval, reported team agreement and outstanding execution checks.
 
 ## Revision 1.1 alignment
 
@@ -85,7 +85,7 @@ On October 24: JavaScript syntax checks passed; 12 local-model checks and 11 DOM
 
 The browser automation environment blocked opening a local `file:` URL. That action was not bypassed. The v2 interface has not been visually inspected in a real browser in this session, and no new v2 screenshot is presented as verified evidence. The preserved PNG remains labelled v1.1.
 
-Independent review of version 2.0 remains pending. Prior review or agreement on older material does not constitute approval of this revision.
+Independent review of version 2.0 is recorded in [NeryBR's approval of PR #9](https://github.com/NeryBR/cyberseat-booking-system/pull/9#pullrequestreview-5637860487) (commit `723579d61ac025b50f59ff64cb0086cb03698a0d`). It was submitted after merge. This design approval does not establish real-browser visual validation or participant usability results; those limitations above remain in force.
 
 ## Scope note from the personal contribution statement
 

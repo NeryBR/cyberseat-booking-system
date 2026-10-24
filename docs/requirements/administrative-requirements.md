@@ -2,7 +2,7 @@
 
 Version 1.0 · October 23, 2026 · Owner: Akhmetov Nurali · ECR-8
 
-Status: proposed specification, ready for team review. Shared-model agreement and reviewer confirmation are pending. Acceptance examples describe future verification, not executed application tests.
+Status: design specification approved by Mansur in PR #5; team agreement with the documented model was reported by Mansur on October 24. See the [October 24 review and agreement record](../project/team-review-2026-10-24.md). Acceptance examples describe future verification, not executed application tests.
 
 ## Purpose and submission scope
 
@@ -134,7 +134,7 @@ Later implementation checks use two clubs, a one-club admin, a multi-club admin,
 | Admin cancellation | Reason required, pre-start only; post-start policy deferred. | Aibekuly Alibi and Mansur Urynbassar |
 | Navigation and states | Guest events; separate personal/club scope; N/A/conflict/stale-data states. | Mansur Urynbassar |
 
-Earlier agreement about booking materials does not prove review of this new specification. Obtain a new review against its commit. Revise this document, the role matrix and affected scenarios/booking rules together if the team changes a proposed decision.
+This specification has [NeryBR's approval of PR #5](https://github.com/NeryBR/cyberseat-booking-system/pull/5#pullrequestreview-5637447311) (commit `834f87e1a78a5ebc1b5c29097b856427dd43f993`). Mansur subsequently reported agreement with the audited materials on behalf of all three participants; see the [October 24 review and agreement record](../project/team-review-2026-10-24.md). Revise this document, the role matrix and affected scenarios/booking rules together if the team changes a proposed decision.
 
 Open decisions: exact authentication/session design and superadministrator bootstrap; initial club minimum duration; post-start club policy; physical history schema/retention; final report response schema. A blocking disagreement on a Must rule must be resolved or explicitly scoped before closure.
 
@@ -142,18 +142,18 @@ Open decisions: exact authentication/session design and superadministrator boots
 
 | Task criterion | Evidence | State |
 | --- | --- | --- |
-| Four separate roles | Role definitions, permission matrix, RBAC-01–09 | Documented; review pending |
-| Clubs, stations, schedules, blocks, events, reports | ADM-01–15 | Documented; review pending |
-| Admin limited to assigned clubs | Matrix; RBAC-02/03/05/06 | Documented; review pending |
-| Existing bookings protected | ADM-04/05/06/08; transaction table | Documented; shared-model review pending |
+| Four separate roles | Role definitions, permission matrix, RBAC-01–09 | Documented; PR #5 approved |
+| Clubs, stations, schedules, blocks, events, reports | ADM-01–15 | Documented; PR #5 approved |
+| Admin limited to assigned clubs | Matrix; RBAC-02/03/05/06 | Documented; PR #5 approved |
+| Existing bookings protected | ADM-04/05/06/08; transaction table | Documented; team agreement reported by Mansur |
 | Priorities and verifiable criteria | Must/Should, IDs, acceptance columns | Documented |
-| Explicit report calculations | Formulas, boundaries, historical inputs, fixtures | Documented; model review pending |
-| Scenario and model coordination | SC/BR/RBAC traces and review table | Traced; agreement pending |
-| Result/commit/PR links and named reviewer | GitHub files and PR; reviewer records commit/outcome | Link evidence in task; review pending |
+| Explicit report calculations | Formulas, boundaries, historical inputs, fixtures | Documented; team agreement reported by Mansur |
+| Scenario and model coordination | SC/BR/RBAC traces and review table | Traced; team agreement reported by Mansur |
+| Result/commit/PR links and named reviewer | GitHub files and PR; reviewer records commit/outcome | PR #5 approval recorded; task links still require verification |
 
 - [ ] Attach both document links and the commit/Pull Request to ECR-8.
-- [ ] Obtain Alibi's agreement on the shared data/transaction model.
-- [ ] Record the actual reviewing participant, reviewed commit and outcome; resolve blocking comments.
+- [x] Agreement with the proposed shared data/transaction design is reported by Mansur on behalf of all three participants, including Alibi; see the [October 24 review and agreement record](../project/team-review-2026-10-24.md).
+- [x] Record the actual reviewing participant, reviewed commit and approval outcome: [NeryBR's approval of PR #5](https://github.com/NeryBR/cyberseat-booking-system/pull/5#pullrequestreview-5637447311) (commit `834f87e1a78a5ebc1b5c29097b856427dd43f993`). Any newly identified blocking issue still requires resolution.
 - [ ] Confirm every criterion, then move the task to Done.
 
 File creation or a PR alone does not complete team review. Do not claim approval or final application test results for this October specification.
