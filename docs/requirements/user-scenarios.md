@@ -105,7 +105,7 @@ The following scenarios define team-approved behavior for the proposed system. T
 
 **Alternative and error flows:** Closing the confirmation dialog shall make no change. An already cancelled reservation shall display its current status. After a connection failure, the client shall request the latest status before repeating an action. A user shall not be able to cancel another user's reservation.
 
-**Acceptance criteria:** Cancellation does not delete the history record; availability changes only after server confirmation. Once the reserved interval has started, the status may be changed only by an authorised club administrator in accordance with club rules, with the action recorded in the audit log.
+**Acceptance criteria:** Cancellation does not delete the history record; availability changes only after server confirmation. At or after the reservation start, cancellation/status changes are not permitted in this baseline, including for administrators (ADM-09). Any future post-start exception requires separately approved club rules and an audit record.
 
 ## SC-06. View the Event Calendar
 
@@ -291,7 +291,7 @@ SC-01–SC-05 form the principal visitor flow for the first UX mockup sequence. 
 | Topic | Approved decision |
 |---|---|
 | Interval boundaries | Reservations use the half-open interval `[start, end)`, so one reservation may end when the next begins. Minimum duration shall be configurable by the club. |
-| Cancellation | A visitor may cancel their own reservation before its start time. Once the interval has started, status changes require an authorised club administrator and an audit-log entry. |
+| Cancellation | A visitor may cancel their own reservation before its start time. At or after the start, status changes are deferred and prohibited in this baseline (ADM-09); future exceptions require separately approved club rules and an audit-log entry. |
 | Lost response during creation | The client shall request the current reservation list after reconnection. The API and database shall prevent duplicate reservations during retries. |
 | Schedule or maintenance conflict | A proposed change that conflicts with an active reservation shall be rejected; the confirmed reservation shall be preserved. |
 | Administrator actions on visitor reservations | Administrators may view reservations for assigned clubs. Any permitted status change shall follow club rules and be recorded in the audit log. |

@@ -26,7 +26,7 @@ The audit verified these public review records and compared applicable file cont
 
 ## Remaining actions
 
-Agreement with the documents does not select a missing submitter/backup, establish the university channel/time zone, prove that task links were added, close a YouTrack card, upload a PDF, confirm submission receipt or execute tests. Those action checkboxes remain open until verified.
+Agreement with the documents does not select a missing submitter/backup, establish the university channel/time zone, prove that task links were added, close a YouTrack card, upload a PDF, confirm submission receipt or execute tests. Those action checkboxes remain open until verified. The later [closure check](closure-evidence-2026-10-24.md) records live task verification and subsequent release decisions without changing the provenance of the agreement above.
 
 The following audit observations remain follow-up work where relevant: reconcile the post-start cancellation wording across scenarios and administrative rules; refresh cross-links from the older proposal/literature text; update or clearly date the historical Alibi-only PDF; verify actual-browser responsive and keyboard behaviour; and confirm the final package, access and submission evidence. Acceptance of these observations does not assert their resolution.
 
