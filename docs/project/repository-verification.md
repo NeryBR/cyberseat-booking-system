@@ -25,12 +25,14 @@ Executed on October 24, 2026:
 
 | Check | Observed result |
 |---|---|
-| Relative links across the 41 Markdown files | 98 relative targets resolved; zero broken paths |
+| Relative links across the 47 Markdown files | 122 relative targets resolved; zero broken paths |
 | Ignore-rule cases for root/nested `.env`, example configuration, keys, environments, dependencies, caches, test artifacts, databases, lockfiles, source and PDF | All 25 cases matched the expected ignore/keep behaviour |
 | Environment example | 12 unique keys; secret/password fields use explicit replacement placeholders; public browser configuration contains no secret key name |
-| Git whitespace validation | Passed |
+| Git whitespace validation for new scaffold content | Passed; inherited Markdown hard line breaks are preserved |
 
 The ignore checks used Git's actual rules; they did not create credentials or install dependencies. These results verify the committed scaffold and do not certify a running system or substitute for human review.
+
+The final merge preserves the team's UX guide and the materials added through PRs 6 and 7. Markdown, Mermaid and SVG line endings are explicitly standardised to LF, matching `.editorconfig`; inherited Markdown CRLF line endings are normalised without changing document text or intentional hard line breaks.
 
 No backend, frontend or database implementation is included, so application unit/integration/build/load tests are not claimed. This verification concerns repository structure and configuration boundaries.
 

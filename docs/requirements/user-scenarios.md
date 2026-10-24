@@ -1,20 +1,20 @@
 # CyberSeat — User and Administrator Scenarios
 
-Version 1.0 · October 23, 2026 · [ECR-1](https://nerybr.youtrack.cloud/issue/ECR-1)
+Version 1.1 · October 23, 2026 · [ECR-1](https://nerybr.youtrack.cloud/issue/ECR-1)
 
-Document owner: Mansur Urynbassar. Status: reviewed and approved by the project team on October 23, 2026.
+Document owner: Mansur Urynbassar. Status: revised design baseline; independent team review of this revision is pending. The previous version reported team agreement on October 23, 2026; this statement does not constitute a recorded GitHub review.
 
 ## Purpose and Scope
 
 This document defines the expected behavior of the proposed CyberSeat system and provides a basis for the functional requirements, use-case model, UX mockups, and subsequent system evaluation. It is part of the first submission due by **6:00 PM on October 24, 2026**. This deadline applies to the project documentation and design materials; it does not require every described feature to be implemented by that date.
 
-The document is based on the CyberSeat README and the project justifications prepared by the three team members. User needs are currently treated as project assumptions and will be validated through interviews and prototype evaluation in a separate activity. Online payment, a loyalty programme, and hardware management are outside the mandatory scope.
+The document is based on the CyberSeat README and the project justifications prepared by the three team members. Visitor needs are supported by the three discussions documented in [user-needs evidence](../research/user-needs-evidence.md). Administrative needs remain assumptions pending administrator research. Prototype evaluation remains a future activity. Online payment, a loyalty programme, and hardware management are outside the mandatory scope.
 
 ## Roles and General Rules
 
 | Role | Access scope |
 |---|---|
-| Guest | Browse clubs, gaming-station specifications, and availability |
+| Guest | Browse clubs, gaming-station specifications, availability, and published events |
 | Registered visitor | Create, view, and cancel only their own reservations; view the event calendar |
 | Club administrator | Manage stations, schedules, reservations, events, and reports for assigned clubs |
 | System administrator | Manage clubs and administrator assignments |
@@ -299,7 +299,7 @@ SC-01–SC-05 form the principal visitor flow for the first UX mockup sequence. 
 | Events | Administrators manage events for assigned clubs. Cancelled events remain in history with a clear status. |
 | Authentication and personal data | Authentication is required to create and manage reservations. Administrators see only the personal data required to service a reservation. |
 
-## Team Review Results
+## Review history and current revision
 
 - [x] Mansur Urynbassar reviewed the scenarios for consistency with the planned user and administrator interfaces.
 - [x] Aibekyly Alibi reviewed SC-02–SC-05 and SC-09–SC-10, including reservation and conflict-prevention rules.
@@ -309,4 +309,4 @@ SC-01–SC-05 form the principal visitor flow for the first UX mockup sequence. 
 - [x] The document was published on GitHub through a dedicated branch and Pull Request.
 - [x] Links to the document, commit, and Pull Request were added to ECR-1.
 
-The document was reviewed and approved by all team members on October 23, 2026. It covers the user and administrator scenarios required by ECR-1 and serves as one of the materials for the October submission. This document does not replace the remaining deliverables required by the committee.
+The checked entries above preserve the previous document's report of team agreement; they are not independent review evidence for this revision. PR #1 shows no submitted GitHub reviews, and the final English version was added after that PR. A team member must review the current revision and record the result in the correction PR. This document remains an input to the separate requirements, UML and UX deliverables.

@@ -1,0 +1,76 @@
+@startuml
+title CyberSeat — Use Case Diagram
+!pragma layout smetana
+left to right direction
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam actorStyle awesome
+
+actor Guest
+actor "Registered Visitor" as Visitor
+actor "Club Administrator" as ClubAdmin
+actor "System Administrator" as SystemAdmin
+
+rectangle "CyberSeat" {
+  usecase "Browse clubs" as UC_Browse
+  usecase "View club and\nstation details" as UC_Details
+  usecase "Check availability" as UC_Availability
+  usecase "View event calendar" as UC_Events
+  usecase "Register / sign in" as UC_Auth
+
+  usecase "Create reservation" as UC_Create
+  usecase "Select date, time,\nand station" as UC_Select
+  usecase "Revalidate availability" as UC_Revalidate
+  usecase "Resolve booking conflict" as UC_Conflict
+  usecase "View own reservations" as UC_Own
+  usecase "Cancel own reservation" as UC_Cancel
+
+  usecase "Manage stations" as UC_Stations
+  usecase "Manage working schedule" as UC_Schedule
+  usecase "Manage unavailable intervals" as UC_Unavailable
+  usecase "Manage reservations" as UC_Reservations
+  usecase "Manage club events" as UC_ManageEvents
+  usecase "View club reports" as UC_Reports
+
+  usecase "Manage clubs" as UC_Clubs
+  usecase "Assign club administrators" as UC_Assign
+}
+
+Guest --> UC_Browse
+Guest --> UC_Details
+Guest --> UC_Availability
+Guest --> UC_Events
+Guest --> UC_Auth
+
+Visitor --> UC_Browse
+Visitor --> UC_Details
+Visitor --> UC_Availability
+Visitor --> UC_Events
+Visitor --> UC_Create
+Visitor --> UC_Own
+Visitor --> UC_Cancel
+
+UC_Create .> UC_Select : <<include>>
+UC_Create .> UC_Revalidate : <<include>>
+UC_Conflict .> UC_Create : <<extend>>\n[station no longer available]
+
+ClubAdmin --> UC_Stations
+ClubAdmin --> UC_Schedule
+ClubAdmin --> UC_Unavailable
+ClubAdmin --> UC_Reservations
+ClubAdmin --> UC_ManageEvents
+ClubAdmin --> UC_Reports
+
+SystemAdmin --> UC_Clubs
+SystemAdmin --> UC_Assign
+
+note bottom of ClubAdmin
+  Restricted to clubs assigned
+  to the administrator.
+end note
+
+note bottom of UC_Own
+  Visitors can access only
+  their own reservations.
+end note
+@enduml

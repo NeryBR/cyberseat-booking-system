@@ -237,4 +237,4 @@ cyberseat-booking-system/
 
 ## Current Limitations
 
-The repository currently contains analysis/design materials and an implementation scaffold. Module READMEs define responsibilities; they are not implemented services. No complete application, final test results, production deployment or verified runtime commands are claimed. Missing team deliverables remain visible in the documentation map. ECR-17 access checks and the final submission tag are separate from this structure change.
+The repository currently contains analysis/design materials, a static UX prototype and an implementation scaffold. Module READMEs define responsibilities; they are not implemented services. No complete application, final test results, production deployment or verified runtime commands are claimed. Follow the documentation map and each deliverable's recorded review status. ECR-17 access checks and the final submission tag are separate from this structure change.
