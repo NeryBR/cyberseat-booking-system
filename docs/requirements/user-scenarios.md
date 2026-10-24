@@ -2,7 +2,7 @@
 
 Version 1.1 · October 23, 2026 · [ECR-1](https://nerybr.youtrack.cloud/issue/ECR-1)
 
-Document owner: Mansur Urynbassar. Status: revised design baseline; independent team review of this revision is pending. The previous version reported team agreement on October 23, 2026; this statement does not constitute a recorded GitHub review.
+Document owner: Mansur Urynbassar. Status: revised design baseline with Alibi's approval in PR #7; see the [October 24 review and agreement record](../project/team-review-2026-10-24.md). The previous version reported team agreement on October 23, 2026; this statement does not constitute a recorded GitHub review.
 
 ## Purpose and Scope
 
@@ -302,11 +302,11 @@ SC-01–SC-05 form the principal visitor flow for the first UX mockup sequence. 
 ## Review history and current revision
 
 - [x] Mansur Urynbassar reviewed the scenarios for consistency with the planned user and administrator interfaces.
-- [x] Aibekyly Alibi reviewed SC-02–SC-05 and SC-09–SC-10, including reservation and conflict-prevention rules.
+- [x] Aibekuly Alibi reviewed SC-02–SC-05 and SC-09–SC-10, including reservation and conflict-prevention rules.
 - [x] Akhmetov Nurali reviewed SC-07–SC-14, including access control, schedules, events, and reporting.
 - [x] The team reviewed and approved the decisions concerning error handling, connection loss, and availability conflicts.
 - [x] The document satisfies the expected result and acceptance criteria of ECR-1.
 - [x] The document was published on GitHub through a dedicated branch and Pull Request.
 - [x] Links to the document, commit, and Pull Request were added to ECR-1.
 
-The checked entries above preserve the previous document's report of team agreement; they are not independent review evidence for this revision. PR #1 shows no submitted GitHub reviews, and the final English version was added after that PR. A team member must review the current revision and record the result in the correction PR. This document remains an input to the separate requirements, UML and UX deliverables.
+The checked entries above preserve the previous document's report of team agreement. Review of the correction revision is separately established by [Alibi-stack's approval of PR #7](https://github.com/NeryBR/cyberseat-booking-system/pull/7#pullrequestreview-5637591235) (commit `d7bae8ea9931bbdb8e4caec01c243f33c8cea493`). See the [October 24 review and agreement record](../project/team-review-2026-10-24.md); historical reported agreement and submitted GitHub review remain distinct. This document remains an input to the separate requirements, UML and UX deliverables.
