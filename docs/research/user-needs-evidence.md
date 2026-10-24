@@ -185,10 +185,10 @@ Confirmed findings in this document mean findings reported within this small vis
 ## Team Review
 
 - [x] Mansur Urynbassar recorded the anonymised discussions and prepared the initial synthesis.
-- [ ] Aibekyly Alibi checked findings related to availability and reservations.
-- [ ] Akhmetov Nurali checked findings related to administration and reporting.
+- [x] Alibi approved the correction revision in PR #7, including this evidence document; see the [October 24 review and agreement record](../project/team-review-2026-10-24.md).
+- [x] Team agreement with the documented administrative/reporting evidence limitations was reported by Mansur on behalf of all three participants on October 24; see the [October 24 review and agreement record](../project/team-review-2026-10-24.md). This is reported agreement, not a separately observed review by Nurali.
 - [x] Validated findings are explicitly separated from assumptions.
 
 ## Publication and review status
 
-The initial deliverable was merged through [PR #4](https://github.com/NeryBR/cyberseat-booking-system/pull/4). Its feature branch was deleted. Use the current repository files or immutable commit links, not deleted-branch URLs. PR #4 has no submitted GitHub reviews. The correction revision requires a recorded review by another team member before it is treated as an independently reviewed submission. Automated/documentation checks do not replace that review.
+The initial version was published through PR #4. The correction revision is covered by [Alibi-stack's approval of PR #7](https://github.com/NeryBR/cyberseat-booking-system/pull/7#pullrequestreview-5637591235) (commit `d7bae8ea9931bbdb8e4caec01c243f33c8cea493`). Additional team agreement was reported by Mansur on October 24; see the [October 24 review and agreement record](../project/team-review-2026-10-24.md). This does not independently verify the original interviews.
