@@ -151,7 +151,7 @@ Open decisions: exact authentication/session design and superadministrator boots
 | Scenario and model coordination | SC/BR/RBAC traces and review table | Traced; team agreement reported by Mansur |
 | Result/commit/PR links and named reviewer | GitHub files and PR; reviewer records commit/outcome | PR #5 approval recorded; ECR-8 result and Done status inspected October 24 |
 
-- [ ] Attach both document links and the commit/Pull Request to ECR-8.
+- [x] Both document permalinks, reviewed commit, PR #5 and actual NeryBR review link were published in [ECR-8](https://nerybr.youtrack.cloud/issue/ECR-8) on October 24 with Mansur’s explicit permission; the saved comment was verified.
 - [x] Agreement with the proposed shared data/transaction design is reported by Mansur on behalf of all three participants, including Alibi; see the [October 24 review and agreement record](../project/team-review-2026-10-24.md).
 - [x] Record the actual reviewing participant, reviewed commit and approval outcome: [NeryBR's approval of PR #5](https://github.com/NeryBR/cyberseat-booking-system/pull/5#pullrequestreview-5637447311) (commit `834f87e1a78a5ebc1b5c29097b856427dd43f993`). Any newly identified blocking issue still requires resolution.
 - [x] Matched the live ECR-8 criteria to the acceptance table above on October 24; ECR-8 was already Done. This verifies the design deliverable, not implementation or executed tests.
