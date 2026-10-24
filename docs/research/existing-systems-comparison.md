@@ -49,13 +49,13 @@ Each matrix assessment is limited to the specific capability described, not a cl
 
 ### Common capabilities
 
-All three systems confirm the market need for advance gaming-station booking. Each connects booking to a venue-specific station or device model rather than treating a booking as a generic appointment. Each also connects the visitor experience with operational software used by the club.
+All three reviewed systems offer advance gaming-station booking. This demonstrates an established product category; evidence of the needs of CyberSeat's intended users is discussed separately in the user research section.
 
 ### Relevant strengths
 
-- **SENET** provides the strongest publicly documented integration between visitor booking, device state, venue operations, payments, and reporting.
+- **SENET** provides publicly documented integration between visitor booking, device state, venue operations, payments, and reporting.
 - **ggLeap** provides detailed booking controls for employees and customers, including multiple-device bookings, resource-lock behaviour, web embedding, payments, and competition features.
-- **LANGAME** provides the clearest consumer discovery experience: users can find multiple clubs, compare club information, open a venue map, and reserve particular stations or several stations for a group.
+- **LANGAME** provides a consumer discovery workflow: users can find multiple clubs, compare club information, open a venue map, and reserve particular stations or several stations for a group.
 
 ### Limitations identified from public evidence
 
