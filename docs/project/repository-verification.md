@@ -1,6 +1,6 @@
 # ECR-14 - Repository Verification
 
-Verification date: October 24, 2026. Responsible participant: Aibekuly Alibi (`Alibi-stack`). Reviewer designated by ECR-14: Mansur Urynbassar (`NeryBR`). Review of this new scaffold remains to be recorded; previous agreement on the five design documents is not presented as a new scaffold review.
+Verification date: October 24, 2026. Responsible participant: Aibekuly Alibi (`Alibi-stack`). Reviewer designated by ECR-14: Mansur Urynbassar (`NeryBR`). Review of this scaffold is recorded in [NeryBR's approval of PR #8](https://github.com/NeryBR/cyberseat-booking-system/pull/8#pullrequestreview-5637491281) (commit `d087177856d5577db669ba207a2f507fbcc629e8`). See the [October 24 review and agreement record](team-review-2026-10-24.md).
 
 ## Authorship and continuity
 
@@ -17,7 +17,7 @@ The existing English README was prepared by `NeryBR` in [commit a6a0a29](https:/
 | Configuration examples | Root `.env.example` contains placeholder values and distinguishes server secrets from public browser configuration |
 | `.gitignore` without committed secrets | Local environment files, keys, dependencies, caches and raw test output excluded; examples, source and lockfiles remain eligible for version control |
 | Startup instructions only after a runnable prototype is verified | No runtime or application-test commands are claimed; implementation entry points and manifests remain later work |
-| Mansur's review | Ready for review; no new review is invented |
+| Mansur's review | Approved in PR #8; reviewer and commit linked above |
 
 ## Repository checks
 
