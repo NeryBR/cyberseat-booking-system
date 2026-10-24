@@ -1,0 +1,55 @@
+# Local configuration and secrets (examples remain versioned).
+.env
+.env.*
+!.env.example
+!**/.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python environments, build artifacts and tool caches.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+build/
+
+# Node dependencies and generated frontend files.
+node_modules/
+dist/
+.vite/
+*.tsbuildinfo
+
+# Local data, backups and generated test output.
+*.log
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.backup
+.coverage
+.coverage.*
+coverage/
+htmlcov/
+test-results/
+playwright-report/
+tests/artifacts/
+backend/tests/artifacts/
+frontend/tests/artifacts/
+tmp/
+.cache/
+
+# Machine-specific editor and OS files.
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo

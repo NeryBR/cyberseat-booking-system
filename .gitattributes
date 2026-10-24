@@ -1,4 +1,4 @@
 *.pdf binary
-*.md text
-*.mmd text
-*.svg text
+*.md text eol=lf
+*.mmd text eol=lf
+*.svg text eol=lf

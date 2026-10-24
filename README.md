@@ -9,7 +9,7 @@ CyberSeat is a diploma project developed within the **Software Engineering** pro
 | Group | SE-2404 |
 | Supervisor | Myrzakerimova Alua |
 | Team members | Aibekuly Alibi, Akhmetov Nurali, Mansur Urynbassar |
-| Current stage | Analysis, design, and preparation for initial evaluation |
+| Current stage | Analysis/design documentation and a documented implementation scaffold; application implementation is pending |
 
 ## Project Overview
 
@@ -155,33 +155,26 @@ Detailed metrics, test conditions, and baseline comparisons are maintained in th
 
 Online payments, a loyalty programme, and hardware management are outside the mandatory project scope.
 
-## Setup and Local Execution
+## Start Here
 
-The project is currently in the analysis and design stage. The following section describes the planned local environment. Exact versions, commands, service addresses, and test instructions will be added after the first runnable prototype has been verified.
+The repository contains design deliverables and a documented implementation scaffold. A runnable API, frontend, database schema and executable application tests have not been introduced yet.
 
-### Planned Environment
+| Your goal | Read first |
+|---|---|
+| Understand the project and find deliverables | [Documentation map](docs/README.md) and [PDF design dossier](docs/report/CyberSeat_Alibi_October24.pdf) |
+| Develop booking or the shared database | [Backend guide](backend/README.md), [booking requirements](docs/requirements/booking-and-nfr.md) and [transaction architecture](docs/diagrams/architecture.md) |
+| Develop administration, access, events or reports | [Server module map](backend/app/modules/README.md) |
+| Develop the visitor/admin interface | [Frontend guide](frontend/README.md) and [screen map](frontend/src/pages/README.md) |
+| Plan or implement verification | [System checks](tests/README.md), [backend checks](backend/tests/README.md) and [evaluation evidence](docs/testing/README.md) |
+| Make a team change | [Contribution guide](CONTRIBUTING.md) and [repository/configuration contract](docs/project/repository-guide.md) |
 
-The primary execution method is planned to use Git, Docker, and Docker Compose. The environment will include the web client, server application, and PostgreSQL.
+## Configuration and Future Local Execution
 
-Development without containers will require compatible versions of Python, Node.js, and PostgreSQL, which will be specified in the dependency files.
+The root [`.env.example`](.env.example) is a configuration contract with placeholders. No runtime reads it yet. Local `.env` files, credentials, dependencies, caches and generated test output are excluded by [`.gitignore`](.gitignore); `.env.example` remains versioned. Only intentionally public browser values may use the `VITE_` prefix.
 
-### Planned Configuration
+The first implementation changes will add compatible dependency manifests and lockfiles, the FastAPI entry point, React client, PostgreSQL/Alembic setup and synthetic seeds. They must document tested setup/start/test commands in the relevant component README. Docker Compose remains the planned integrated environment. Do not assume `docker compose up`, an API address or an application test command works before that implementation is delivered.
 
-- Database connection parameters and application settings will be documented in `.env.example`.
-- Local values will be stored in `.env`, which must be excluded from version control.
-- The database schema will be created and updated through Alembic migrations.
-- A separate demonstration data set will include sample clubs, stations, and users with different roles.
-
-### Planned Prototype Execution
-
-1. Clone the repository.
-2. Prepare the local configuration using `.env.example`.
-3. Start PostgreSQL and apply the migrations.
-4. Load the demonstration data.
-5. Start the server application and web interface.
-6. Verify the search, reservation creation, and reservation cancellation flow.
-
-Verified commands, interface and API addresses, and test instructions will be added with the first working prototype.
+Database design and implementation remain ECR-12/ECR-22; interface implementation remains ECR-21 and administrative implementation remains ECR-23.
 
 ## Project Resources
 
@@ -190,8 +183,44 @@ Verified commands, interface and API addresses, and test instructions will be ad
 - [User and Administrator Scenarios](docs/requirements/user-scenarios.md)
 - [Alibi's October 24 deliverables](docs/report/alibi-deliverables.md): proposal, critical literature review, technology comparison, booking requirements and architectural diagrams. Team agreement confirmed by Alibi on October 23, 2026.
 - [Design dossier (PDF)](docs/report/CyberSeat_Alibi_October24.pdf): readable portrait edition with clickable contents, section navigation, requirement cards and full-page architectural views.
+- [ECR-14 repository verification](docs/project/repository-verification.md): authorship, structure, configuration and checks for the initial submission.
 
-## Planned Repository Structure
+## Repository Structure
+
+Every scaffold directory contains a README explaining its purpose, owner and expected implementation. The detailed [repository guide](docs/project/repository-guide.md) maps these paths to the agreed architecture.
+
+```text
+cyberseat-booking-system/
+|-- .github/pull_request_template.md
+|-- .editorconfig
+|-- .env.example
+|-- .gitattributes
+|-- .gitignore
+|-- CONTRIBUTING.md
+|-- backend/
+|   |-- app/
+|   |   |-- api/
+|   |   |-- core/
+|   |   |-- db/
+|   |   `-- modules/
+|   |       |-- identity/
+|   |       |-- catalogue/
+|   |       |-- booking/
+|   |       |-- administration/
+|   |       |-- events/
+|   |       `-- reporting/
+|   |-- migrations/
+|   `-- tests/{unit,integration}/
+|-- frontend/
+|   |-- src/
+|   |   |-- app/
+|   |   |-- pages/
+|   |   |-- features/
+|   |   `-- shared/{api,ui}/
+|   `-- tests/
+|-- tests/{e2e,load,fixtures}/
+`-- docs/{requirements,research,diagrams,ux,testing,project,report}/
+```
 
 | Directory | Purpose |
 |---|---|
@@ -203,8 +232,9 @@ Verified commands, interface and API addresses, and test instructions will be ad
 | `docs/diagrams/` | Architectural diagrams and ER diagram |
 | `docs/ux/` | UX mockups and prototype materials |
 | `docs/testing/` | Verification plan and test results |
+| `docs/project/` | Repository guide, configuration contract and repository verification evidence |
 | `docs/report/` | Initial-evaluation and pre-defence reports |
 
 ## Current Limitations
 
-The repository currently contains analysis, design, and planning materials. A complete application, final test results, and confirmed execution instructions are not yet available. These outputs will be added progressively during the implementation and evaluation stages.
+The repository currently contains analysis/design materials, a static UX prototype and an implementation scaffold. Module READMEs define responsibilities; they are not implemented services. No complete application, final test results, production deployment or verified runtime commands are claimed. Follow the documentation map and each deliverable's recorded review status. ECR-17 access checks and the final submission tag are separate from this structure change.
