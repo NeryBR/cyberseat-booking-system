@@ -1,0 +1,7 @@
+# Venue artwork provenance
+
+`gaming-lounge.png` is generated atmosphere artwork for the CyberSeat design prototype, created October 24, 2026 using the built-in image generation tool (`imagegen` skill). It is not a photograph of an actual partner club. Club cards reuse cropped/colour-adjusted views of the same asset through CSS; these are illustrative venues, not venue verification evidence. The asset is stored in the repository so local viewing requires no external service.
+
+Final generation prompt:
+
+> Use case: photorealistic-natural. Asset type: wide hero background for a polished esports venue booking website named CyberSeat. Create a cinematic architectural photograph of a premium gaming lounge: multiple high-end PC stations in neat rows, large monitors with abstract subtle screen light (no game art), graphite desks, beautiful gaming chairs, real physically plausible materials, dramatic but tasteful violet strip lights and small acid-lime accent lights, dark charcoal interior with slightly misty volumetric depth, high-end editorial interior photography, 24mm architectural lens. Wide horizontal 16:9 composition. Important layout: keep the LEFT THIRD of the image very dark with spacious negative space for white website headline; place the more detailed illuminated gaming stations on the RIGHT TWO THIRDS. Sophisticated, crisp, restrained, no cartoon, no generic neon city, no humans, no text, no logos, no watermark. This is venue ambience art, not a screenshot of a UI. Produce one landscape image.
