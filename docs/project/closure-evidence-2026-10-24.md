@@ -13,7 +13,7 @@ The public GitHub issue-comment and inline-review-comment endpoints for PRs #5, 
 
 ## Official requirements source
 
-The locally supplied university document “До 24 октября.docx” was read for its requirements. It lists the eleven evaluation components and repository requirements, including review before merge and exact submission tags. Its text does not specify 18:00, a time zone, a submission form URL or a named submitter/backup. The existing before-18:00 working cutoff therefore still needs its original notice/form as corroboration. Do not infer the official time zone from this computer.
+The locally supplied university document “До 24 октября.docx” was read for its requirements. It lists the eleven evaluation components and repository requirements, including review before merge and exact submission tags. Its text does not specify 18:00, a time zone, a submission form URL or a named submitter/backup. The live YouTrack descriptions specify the before-18:00 cutoff. Mansur subsequently confirmed the applicable Astana time zone (UTC+5) and form in this conversation. The release controls below rely on that explicit confirmation; the DOCX itself is not represented as the source of those additional details.
 
 The historical Alibi PDF remains a dated five-deliverable dossier. The current Markdown records and subsequent review/closure records supplement it; it is not a newly assembled full-team submission.
 
@@ -29,22 +29,22 @@ After Mansur signed in, the live cards and their result comments were inspected 
 
 ## Submission ownership
 
-Mansur Urynbassar confirmed in this conversation that he will submit the final package himself through the [Microsoft submission form](https://forms.cloud.microsoft/r/Yy6AXT5pe3). The form has not been filled or submitted by Codex. A named backup and deadline time zone are still pending clarification; no receipt is claimed.
+Mansur Urynbassar confirmed in this conversation that he will submit the final package himself through the [Microsoft submission form](https://forms.cloud.microsoft/r/Yy6AXT5pe3). The form has not been filled or submitted by Codex. He subsequently confirmed Aibekuly Alibi as backup and the deadline of October 24, 2026 BEFORE 18:00 Astana time, UTC+5. Existing internal checkpoints (15:00 content freeze, 16:00 review, 16:30 package check, target 17:00 send and 17:30 receipt check) remain planning controls in that same zone; this record does not assert they were executed. Confirmation is reported by Mansur, not a separately obtained statement from Alibi. No submission receipt is claimed.
 
 ## Disposition of the eleven remaining checklist items
 
 | Item | Result of this check |
 | --- | --- |
-| ECR-8: attach both document links and commit/PR | Existing task comment has PR/merge; direct file and actual GitHub-review links prepared for a follow-up comment, publication pending permission. |
+| ECR-8: attach both document links and commit/PR | Completed: direct file permalinks, reviewed commit, PR #5 and actual GitHub review link published and verified in ECR-8 on October 24. |
 | ECR-8: verify criteria and Done | Verified against live criteria; already Done. |
-| ECR-13: attach file and commit/PR | Existing task comment has PR/commit/reviewer; direct file and review links prepared, publication pending permission. |
+| ECR-13: attach file and commit/PR | Completed: plan permalink, reviewed commit, PR #6 and actual GitHub review link published and verified in ECR-13 on October 24. |
 | ECR-13: verify criteria and Done | Verified against live criteria; already Done. |
 | Management: verify task ID | Confirmed ECR-15 and assignee Akhmetov Nurali. |
-| Management: channel, time zone, submitter and backup | Mansur and form confirmed; zone/backup still pending. |
-| Management: attach file/commit/PR/review links | Existing ECR-15 record names files and PR/commit/reviewer; direct file/review links prepared, publication pending permission. |
+| Management: channel, time zone, submitter and backup | Completed: Mansur submits through the supplied form; Alibi is backup; before 18:00 Astana time (UTC+5), confirmed by Mansur. |
+| Management: attach file/commit/PR/review links | Completed: both file permalinks, reviewed commit, PR #10 and actual GitHub review link published and verified in ECR-15 on October 24. |
 | Management: verify criteria and Done | Planning criteria verified; already Done. Submission itself remains separate. |
-| Risks: owners/checkpoints/backup | Risk owners and proposed checkpoints exist; final release timing and named backup remain pending. |
+| Risks: owners/checkpoints/backup | Completed as a planning record: existing owners/proposed checkpoints retain the reported team agreement; Mansur confirmed UTC+5 and backup Alibi. Actual execution remains separate. |
 | Risks: resolve blocking comments and inconsistent documents | No blocking comment was visible on the inspected PRs/cards; cancellation/research inconsistencies corrected in this change. |
-| Risks: evidence in task before Done | Existing ECR-15 evidence verified; follow-up direct links pending permission. No earlier chronology is rewritten. |
+| Risks: evidence in task before Done | Completed: existing ECR-15 evidence verified and supplemental direct links published with permission. The task was already Done; no earlier chronology is rewritten. |
 
-Five items are resolved in this change; six remain open. Application tests, the final tag, the complete-team PDF, supervisor feedback and submission receipt are not certified by this checklist update.
+All eleven checklist items are resolved in this change. With Mansur’s explicit permission, supplemental comments were published from his account in ECR-8, ECR-13 and ECR-15 and verified in the rendered task activity. These comments document the checks and existing review evidence; they are not newly submitted GitHub approvals of PR #12. Application tests, the final tag, the complete-team PDF, supervisor feedback and submission receipt are not certified by this checklist update.
