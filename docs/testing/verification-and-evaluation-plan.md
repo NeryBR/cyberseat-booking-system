@@ -243,6 +243,6 @@ Limitations to report: convenience sample and learning effects; simulated rather
 - [x] Plan clearly distinguishes expected values and future execution from actual results.
 - [x] Record the actual reviewing participant, plan commit and approval outcome: [NeryBR's approval of PR #6](https://github.com/NeryBR/cyberseat-booking-system/pull/6#pullrequestreview-5637446581) (commit `eee6c80b0134a252eb4a1f862df9701e30f378d7`). Any newly identified blocking issue still requires resolution.
 - [ ] Attach this file, commit and Pull Request links to ECR-13.
-- [ ] Confirm all task criteria and only then change the task to Done.
+- [x] Matched the live ECR-13 criteria to owners/cases, metric conditions/data/thresholds/baselines and requirement traceability on October 24; the card was already Done. No planned test is marked executed.
 
 PR #6 supplies approval of ECR-13 itself. No final tests or measured improvement are asserted by this plan.
