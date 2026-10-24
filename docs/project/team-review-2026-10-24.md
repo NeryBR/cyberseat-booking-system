@@ -30,4 +30,11 @@ Agreement with the documents does not select a missing submitter/backup, establi
 
 The following audit observations remain follow-up work where relevant: reconcile the post-start cancellation wording across scenarios and administrative rules; refresh cross-links from the older proposal/literature text; update or clearly date the historical Alibi-only PDF; verify actual-browser responsive and keyboard behaviour; and confirm the final package, access and submission evidence. Acceptance of these observations does not assert their resolution.
 
-Future backend/frontend implementation, real database/concurrency/load tests, administrator research, participant usability sessions and supervisor feedback retain their existing planned/unverified status.
+Future backend/frontend implementation, real database/concurrency/load tests, administrator research, and participant usability sessions retain their existing planned/unverified status. Supervisor feedback has subsequently been received; see the dated update below.
+
+## Subsequent package and supervisor evidence
+PR 13 was approved by [NeryBR in a submitted GitHub review](https://github.com/NeryBR/cyberseat-booking-system/pull/13#pullrequestreview-5638090721) against commit `f473efa9b683970bfbe81a868b62ce3ea36c1bb6` and merged as `0ac6fb0f1b662896910127040ba6a3e0876ddb45`. The later [NeryBR comment](https://github.com/NeryBR/cyberseat-booking-system/pull/13#issuecomment-6383845243) reports a Codex-assisted inspection performed at Mansur's request. It is a comment, separate from the submitted approval.
+
+Nurali supplied the supervisor's actual WhatsApp reply and confirmed its date as October 24, 2026. Myrzakerimova Alua reported that she checked YouTrack, the PDF, and GitHub and had no comments. See the [verbatim feedback, translation, and provenance](../report/supervisor-feedback-record.md). The image is retained separately and is not embedded in the report.
+
+Nurali identified the accompanying instruction to record the response and rebuild the report as a joint message from Mansur and Alibi. Earlier full-document reviews concern the preceding PDF checksum. They do not automatically certify the rebuilt file; its verification record states the revision-specific review position.
