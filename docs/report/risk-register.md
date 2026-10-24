@@ -14,7 +14,7 @@ An owner monitors the trigger and organises treatment; collaborators keep their 
 
 | ID | Risk / consequence | L / I / score | Owner | Exposure and initial state |
 | --- | --- | --- | --- | --- |
-| R-01 | Target respondents unavailable; user-need evidence and UX validation remain incomplete. | 3 / 2 / 6 High | Mansur Urynbassar | October evidence and later user study; Open, respondent availability unverified here. |
+| R-01 | Target respondents unavailable; user-need evidence and UX validation remain incomplete. | 3 / 2 / 6 High | Mansur Urynbassar | October visitor evidence is documented in ECR-3 (three owner-supplied discussions); administrator research and the later user study remain open. No independent authentication of interviews is claimed. |
 | R-02 | Concurrent booking/admin operations create overlapping reservations or invalidate existing bookings. | 2 / 3 / 6 High | Aibekuly Alibi | October design consistency; D1–D4 implementation; Open, no implementation guarantee claimed. |
 | R-03 | Frontend and backend API contracts diverge, delaying integration or misrepresenting booking outcomes. | 3 / 2 / 6 High | Mansur Urynbassar | October contract review; D1–D3 integration; Open. Alibi/Nurali own server contract decisions. |
 | R-04 | Scope expands into optional features, displacing mandatory materials or core implementation. | 2 / 2 / 4 Medium | Akhmetov Nurali | G1 freeze through D4; Open. |
@@ -46,7 +46,7 @@ For a triggered risk, record: risk ID, observed date/time and time zone, evidenc
 
 Use states Open -> Treatment in progress -> Monitoring -> Closed, or Escalated when a gate is threatened. Closure needs evidence and teammate acknowledgement; a PR merge alone is not closure. For later technical risks, agreed design can reduce uncertainty but cannot substitute for implementation tests. R-05 must be reassessed at the next real release even after this October submission succeeds.
 
-The current known access limitation is that the live YouTrack board asked for sign-in during preparation. This is not evidence of a failed project or missed submission; the actual card ID/status and package receipt remain to be confirmed. A task marked Done must include links to the delivered plan/register, commit/PR and actual reviewing participant. Earlier approval of another task is not approval of this risk register.
+The authenticated October 24 follow-up verified [ECR-15](https://nerybr.youtrack.cloud/issue/ECR-15), assigned to Akhmetov Nurali and already Done, with the plan/register, PR #10, commit and reviewer identified in its result record. See the [closure evidence](../project/closure-evidence-2026-10-24.md). This is planning-task evidence, not package receipt or execution of risk treatments.
 
 ## 5. Review record
 
@@ -54,5 +54,5 @@ Prepared by Akhmetov Nurali with assistance in drafting, based on the supplied t
 
 - [x] Record the actual reviewer, reviewed commit, date and decision source: [NeryBR's approval of PR #10](https://github.com/NeryBR/cyberseat-booking-system/pull/10#pullrequestreview-5637783155) (commit `84602e21fe42c5f31bf91b70fdd96aa992271288`), submitted October 24, 2026.
 - [ ] Confirm treatment owners and the proposed internal checkpoints, including submission backup.
-- [ ] Resolve blocking comments; update the management plan and this register together if decisions change.
+- [x] Check published PR comments and correct identified documentation inconsistencies. The October 24 check found no issue/review comments on PRs #5, #6, #10 and #11; scenario cancellation wording and research references were reconciled. See the [closure evidence record](../project/closure-evidence-2026-10-24.md). Release decisions and external task checks below remain open.
 - [ ] Add result/commit/PR/review evidence to the verified management task before marking it Done.
