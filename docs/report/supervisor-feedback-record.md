@@ -1,37 +1,40 @@
 # Supervisor Feedback and Response Record - ECR-16
 
-Record date: October 24, 2026. Coordinator: Akhmetov Nurali.
+Record updated: October 24, 2026. Coordinator: Akhmetov Nurali.
 
-## Verified identity and scope
-The repository README identifies Myrzakerimova Alua as the supervisor. This record concerns the October analysis, design, and planning package, not a completed application or final test results.
+## Supervisor and receipt
+Supervisor: Myrzakerimova Alua, as identified in the project README and by Nurali when supplying the original conversation image.
 
-## Evidence status
-No supervisor response, dated request, delivery evidence, or escalation record was found in the inspected repository or ECR-16 activity. This means the evidence was unavailable to this audit; it does not establish that no communication occurred elsewhere. A request must not be described as unanswered until its actual sending date, channel, recipient, and materials are documented.
+Channel: WhatsApp. Date received: October 24, 2026, confirmed by Nurali. The screenshot shows the request at 17:54 and the supervisor's reply at 17:55; it does not display a calendar date or time zone. The date and channel are therefore attributed to Nurali's explicit confirmation rather than inferred from the image.
 
-| Evidence field | Current disposition |
-|---|---|
-| Supervisor | Myrzakerimova Alua, as identified in README |
-| Actual request date and channel | Not supplied or verified |
-| Materials actually sent | Not supplied or verified |
-| Delivery or request reference | Not supplied or verified |
-| Supervisor response and date | Not supplied or verified |
-| Corrections and team verification | No feedback-driven corrections can be verified without the feedback source |
-| Escalation of an unanswered request | Not supplied or verified |
+## Request and reviewed materials
+The visible request links [Pull Request 13](https://github.com/NeryBR/cyberseat-booking-system/pull/13) and asks the supervisor to inspect the consolidated PDF and requirements checklist for the October analysis-and-design submission. It explicitly separates later implementation and final tests. The supervisor states that she checked YouTrack, the PDF, and GitHub.
 
-## Prepared request - not sent
-Dear Ms Myrzakerimova,
+## Verbatim reply in the original language
+The following Russian text is reproduced verbatim as primary evidence; the surrounding record and its translation are in English.
 
-Please review Team 3's CyberSeat materials for the October 24 analysis-and-design submission. The package covers the proposal and scope, exploratory visitor evidence, literature and alternatives, requirements, architectural and use-case diagrams, UX prototype, verification and evaluation plan, and project management and risks.
+Здравствуй Нурали! Да я проверила ваши работы в ютреке и пдф и гитхаб, мне все понравилось, не вижу никаких недочетов, так что я считаю что замечаний нет.
 
-We request your comments on the scope, consistency of the requirements and diagrams, treatment of the evidence limitations, proposed verification methods, and the distinction between October documentation and subsequent software implementation. Please identify any corrections required for this submission.
+## English translation
+Hello Nurali! Yes, I checked your work in YouTrack, the PDF, and GitHub. I liked everything, I do not see any shortcomings, so I consider that there are no comments.
 
-The repository is available at https://github.com/NeryBR/cyberseat-booking-system. The consolidated report is prepared as Team_3_Approbation_Report_24_October.pdf. These references identify prepared materials and do not establish that this request has been delivered.
+## Decision and response to comments
+The supervisor reported no shortcomings and no comments on the materials she reviewed. No substantive correction was requested. The disposition is therefore no corrective action required for that feedback. This is supervisor feedback on the October materials, not a GitHub review or a claim that the final application was implemented or tested.
 
-Kind regards,
-Akhmetov Nurali, on behalf of Team 3
+Nurali subsequently relayed a joint message from Mansur Urynbassar and Aibekuly Alibi requesting that the reply, supervisor name, date, and channel be recorded without embedding the screenshot in the report; that stale missing-feedback statements be updated; and that the PDF be rebuilt. This record implements that documentation request. It does not claim that either participant has already reviewed the subsequently rebuilt PDF.
 
-## Processing genuine comments
-For each actual comment, record the source and date, the exact issue raised, its disposition, the responsible participant, the changed file and commit/Pull Request, and the team member who verified the correction. If the request receives no response, record the actual request reference, the response status as of a dated check, and the actual follow-up or escalation. Do not fabricate supervisor approval.
+## Evidence preservation
+The original supplied image is retained separately as `supervisor-whatsapp-original.jpg` in the local evidence archive. Its SHA-256 is `989c31282072dc4711cd3f82a23d8dc47e6f552effe1376488ac7d50af9ef50c`. The original conversation should also remain available in Nurali's WhatsApp history. No screenshot of the private conversation is embedded in the report or committed to the public repository.
 
-## Closure gate
-ECR-16 remains in Queue. Replace missing evidence with genuine dated records before claiming completion. This prepared request has not been sent by this work.
+The screenshot was supplied by Nurali, who identified the respondent as the supervisor and confirmed the date and channel. The image shows the message exchange but no contact header. This provenance is retained rather than represented as independent access to the supervisor's account.
+
+## Change log
+| Record | Action | Evidence and limit |
+|---|---|---|
+| Supervisor feedback | Replaced the earlier pending-feedback entry with the actual reply and receipt metadata | Original image retained; quotation transcribed and English translation supplied |
+| Comments | Recorded no comments and no required substantive corrections | Supervisor's actual reply; no invented correction or approval |
+| Report and checklist | Updated current feedback status and rebuilt the consolidated report | Technical checks and revised-PDF review are recorded separately |
+| Historical evidence | Retained the chronology of earlier missing evidence and earlier PDF reviews | Earlier records do not certify a later PDF revision |
+
+## Task disposition
+The ECR-16 feedback criterion is now supported by the supplied conversation: materials were presented, a real dated response was received, and no comments required correction. Record the delivered record and revision in YouTrack before changing the issue to Done. Final submission, access/tag controls, and review of the rebuilt PDF are separate tasks.
