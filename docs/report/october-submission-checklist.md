@@ -33,7 +33,7 @@ The original university requirements document was not provided to this work. The
 | Final submission version | No pre-defense-1 tag was present in the cloned baseline | ECR-17 remains a separate unresolved release gate; no tag created or moved |
 | Priorities and deadlines | Live October descriptions retain the before-18:00 cutoff; internal targets are explicitly separate | Stage, owner, and priority observations recorded below; not all issue field dates are exposed in the inspected UI |
 | Deadline/channel | Existing closure record reports Mansur's confirmation of October 24 before 18:00 Astana time, UTC+5, and the Microsoft form | Reported source, not newly confirmed by the university in this work |
-| Consolidated PDF | Team_3_Approbation_Report_24_October.pdf compiled from this baseline, with new audit and feedback-status records | Technical PDF verification is recorded separately; two team-member reviews are still required |
+| Consolidated PDF | Team_3_Approbation_Report_24_October.pdf compiled from this baseline, with new audit and feedback-status records | Technical PDF verification is recorded separately; two full-PDF reviews with no issues were subsequently reported by Nurali; see the consolidated report verification record |
 | YouTrack screenshot PDF | ECR-19 is Queue in the inspected live card; no final screenshot PDF was found in this repository | Separate required artifact remains unverified; this consolidated report does not substitute for it |
 | Submission receipt | ECR-20 is Queue; no receipt supplied | No submission performed or claimed |
 | Supervisor feedback | No dated request/response or escalation evidence supplied | ECR-16 remains Queue |
@@ -70,7 +70,7 @@ The following observations are a point-in-time snapshot from October 24. Titles 
 All eleven components have been inspected; item 11 is incomplete and several release controls remain unverified. ECR-18 remains Queue because complete-team package verification and dependent release evidence have not been established. Do not convert this audit into a declaration that the package is ready for submission.
 
 1. Supply the actual supervisor request/response or unanswered-request and escalation evidence.
-2. Have at least two named team members review the exact PDF, recording its SHA-256 and their actual findings; all three participate in package verification.
+2. Two full-PDF reviews with no issues were subsequently reported by Nurali for Alibi and Mansur against the unchanged PDF checksum; see consolidated-report-verification.md. Verification of the entire package by all three remains pending.
 3. Complete ECR-17 access and exact-version checks; preserve any established submission tag.
 4. Complete the separate ECR-19 screenshot PDF and confirm form limits.
 5. Submit through the authorised channel and retain the actual receipt in ECR-20.

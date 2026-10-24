@@ -16,22 +16,22 @@ This is a complete compilation of the available analysis-and-design material, la
 
 The PDF was generated with ReportLab and reopened with pypdf. It contains 121 pages and is approximately 3.02 MB. Text extraction succeeded across all pages. Required section headings were checked, including the proposal, research, requirements, all three diagrams, UX prototype, verification plan, project management, risks, and feedback status.
 
-All 121 pages were rendered with Poppler. Eight contact sheets covering every rendered page were inspected for layout and section continuity. The report contains twelve labelled historical UX screen plates and three vector diagrams. A pdfplumber coordinate check found zero text characters outside the page's expected content/header/footer bounds. The report's prose contains no obsolete GitLab URL or Merge Request terminology. These are document checks assisted by Codex; they are not application tests or independent team-member reviews.
+All 121 pages were rendered with Poppler. Eight contact sheets covering every rendered page were inspected for layout and section continuity. The report contains twelve labelled historical UX screen plates and three vector diagrams. A pdfplumber coordinate check found zero text characters outside the page's expected content/header/footer bounds. The report's prose uses the current repository URL and Pull Request terminology. These are document checks assisted by Codex; they are not application tests or independent team-member reviews.
 
 Clickable contents, section bookmarks, page numbers, pinned source links, and a source manifest are included. The embedded UX screens are the preserved v1.1 export; they are not presented as screenshots of the redesigned v2 interface. The v2 local prototype remains linked from the source documentation.
 
 ## Human review of this exact PDF
 
-No review of this exact compiled PDF by a team member has been recorded in this work. Earlier source Pull Request reviews do not satisfy this gate.
+On October 24, 2026, Nurali reported in the working chat that Aibekuly Alibi and Mansur Urynbassar had both reviewed the entire new 121-page PDF and found no issues. This is an attributed user-reported review record; neither reviewer submitted a separate statement or GitHub approval in this work. Earlier source Pull Request approvals are not used as evidence for this PDF review. The PDF has not changed since that confirmation. Its SHA-256 is `8498ccedb377999dc19c53ba91641f045663edc976c37b593bbe2c3f794fdcac`.
 
 | Participant | Review date | Exact PDF SHA-256 | Full review outcome |
 |---|---|---|---|
-| Aibekuly Alibi | Not recorded | Not recorded | Pending |
+| Aibekuly Alibi | October 24, 2026, reported by Nurali | 8498ccedb377999dc19c53ba91641f045663edc976c37b593bbe2c3f794fdcac | Entire 121-page PDF reviewed; no issues reported |
 | Akhmetov Nurali | Not recorded | Not recorded | Pending |
-| Mansur Urynbassar | Not recorded | Not recorded | Pending |
+| Mansur Urynbassar | October 24, 2026, reported by Nurali | 8498ccedb377999dc19c53ba91641f045663edc976c37b593bbe2c3f794fdcac | Entire 121-page PDF reviewed; no issues reported |
 
-At least two named participants must open and inspect the entire report, verify sections, diagrams, tables and links, and record actual findings against the exact checksum. Correct blocking findings and review the revised checksum. Approval of a source PR, a routine comment, or an AI check must not be represented as that review.
+Two full-PDF reviews with no issues have now been reported by Nurali. No individual check beyond full-document review and that outcome is attributed to either reviewer. Any change to the PDF invalidates this checksum-specific record and requires review of the revised file. The statements inside the PDF that review was pending describe its compilation-time state; this subsequent dated record updates that state without altering the reviewed PDF.
 
 ## Closure gate
 
-ECR-24 remains Queue until required evidence is available, the final PDF opens correctly, all required sections satisfy their evidence requirements, and at least two team members have reviewed the exact version. This record does not establish submission, receipt, supervisor approval, final application implementation, or executed final tests.
+The technical checks and two user-reported full-document reviews are recorded. ECR-24 remains Queue because the supervisor-feedback evidence required by the report is still unavailable; compilation of an evidence-gap chapter is not supervisor feedback. This record does not establish submission, receipt, supervisor approval, final application implementation, or executed final tests.

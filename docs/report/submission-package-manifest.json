@@ -106,7 +106,18 @@
       "baseline": "23047b9566a376f6c463b5111831946cd12bf429"
     }
   ],
-  "human_review": "Pending: no reviews of this exact PDF recorded",
+  "human_review": {
+    "source": "Reported by Nurali in the working chat on October 24, 2026",
+    "reviewers": [
+      "Aibekuly Alibi",
+      "Mansur Urynbassar"
+    ],
+    "scope": "Entire exact 121-page PDF",
+    "outcome": "No issues reported by either reviewer",
+    "pdf_sha256": "8498ccedb377999dc19c53ba91641f045663edc976c37b593bbe2c3f794fdcac",
+    "formal_github_approval": "No new submitted approval verified"
+  },
   "supervisor_evidence": "Not supplied or verified",
-  "technical_checks": "PDF reopened; all pages extract text; required sections present; obsolete repository URL and terminology absent. Visual review recorded separately."
+  "technical_checks": "PDF reopened; all pages extract text; required sections present; obsolete repository URL and terminology absent. Visual review recorded separately.",
+  "compilation_record_note": "The embedded audit and source hashes describe compilation-time source revisions. The external audit and review record were updated after compilation to record the reported reviews; the PDF bytes remain unchanged."
 }
